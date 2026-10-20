@@ -1,0 +1,55 @@
+[
+  {
+    "id": "ren_shi_mao",
+    "title": "人是猫",
+    "artist": "张卡斯 / 洛天依",
+    "charts": [
+      {
+        "label": "普通+",
+        "chart": "res://chart.json",
+        "info": "res://song.json"
+      },
+      {
+        "label": "挑战",
+        "chart": "res://chart-hard.json",
+        "info": "res://song-hard.json"
+      }
+    ]
+  },
+  {
+    "id": "kaiba_mass",
+    "title": "海馬成長痛 × Mass Destruction",
+    "artist": "雨宫十尃",
+    "charts": [
+      {
+        "label": "挑战",
+        "chart": "res://songs/kaiba_mass-chart.json",
+        "info": "res://songs/kaiba_mass-song.json"
+      }
+    ]
+  },
+  {
+    "id": "lost_one",
+    "title": "ロストワンの号哭",
+    "artist": "Neru / 鏡音リン",
+    "charts": [
+      {
+        "label": "挑战",
+        "chart": "res://songs/lost_one-chart.json",
+        "info": "res://songs/lost_one-song.json"
+      }
+    ]
+  },
+  {
+    "id": "never_more",
+    "title": "Never More",
+    "artist": "平田志穂子",
+    "charts": [
+      {
+        "label": "进阶",
+        "chart": "res://songs/never_more-chart.json",
+        "info": "res://songs/never_more-song.json"
+      }
+    ]
+  }
+]
