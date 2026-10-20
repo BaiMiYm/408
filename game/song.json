@@ -1,0 +1,96 @@
+{
+  "title": "人是猫",
+  "artist": "张卡斯 / 洛天依",
+  "audio": "res://assets/ren_shi_mao.mp3",
+  "bpm": 148.0,
+  "requested_bpm": 146,
+  "bpm_selection": "按用户确认，以音频鼓点对齐约 148 BPM",
+  "duration": 136.216217041016,
+  "grid_offset_seconds": 0.204,
+  "difficulty": "NORMAL+",
+  "note_count": 274,
+  "sections": [
+    {
+      "start": 0.204,
+      "end": 13.176973,
+      "type": "引入",
+      "focus": "bass",
+      "load": 0.35
+    },
+    {
+      "start": 13.176973,
+      "end": 26.149946,
+      "type": "应答 A",
+      "focus": "response",
+      "load": 0.62
+    },
+    {
+      "start": 26.149946,
+      "end": 39.122919,
+      "type": "应答 B",
+      "focus": "mixed",
+      "load": 0.68
+    },
+    {
+      "start": 39.122919,
+      "end": 65.068865,
+      "type": "推进 A",
+      "focus": "drums",
+      "load": 0.94
+    },
+    {
+      "start": 65.068865,
+      "end": 71.555351,
+      "type": "过渡",
+      "focus": "harmony",
+      "load": 0.28
+    },
+    {
+      "start": 71.555351,
+      "end": 91.014811,
+      "type": "推进 B",
+      "focus": "mixed",
+      "load": 1
+    },
+    {
+      "start": 91.014811,
+      "end": 103.987784,
+      "type": "留白间奏",
+      "focus": "harmony",
+      "load": 0.2
+    },
+    {
+      "start": 103.987784,
+      "end": 110.47427,
+      "type": "回归引入",
+      "focus": "response",
+      "load": 0.48
+    },
+    {
+      "start": 110.47427,
+      "end": 129.93373,
+      "type": "回归",
+      "focus": "drums",
+      "load": 0.9
+    },
+    {
+      "start": 129.93373,
+      "end": 136.216217,
+      "type": "收尾",
+      "focus": "harmony",
+      "load": 0.18
+    }
+  ],
+  "chart_status": "全量重编：录音起音候选、按声部组织短组、分段疏密与持续和声长按；待逐拍实听与手机手感验收",
+  "audio_sha256": "3102ad7060f115e4a5e0767c8cff46d3be01e8af87c40e029efed352d16a00b2",
+  "schema_version": 2,
+  "note_types": {
+    "tap": 260,
+    "hold": 14,
+    "roll": 0
+  },
+  "required_presses": 274,
+  "double_accents": 18,
+  "chart_revision": "0.8.0",
+  "peak_objects_per_second": 5
+}
