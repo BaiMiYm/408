@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "id": "lost_one",
+  "title": "ロストワンの号哭",
+  "artist": "Neru / 鏡音リン",
+  "audio": "res://assets/lost_one.mp3",
+  "bpm": 161.999,
+  "bpm_selection": "根据本地录音分段鼓点估计并作全曲网格拟合，非官方标注",
+  "duration": 217.783920288086,
+  "grid_offset_seconds": 0.372565,
+  "difficulty": "挑战",
+  "difficulty_label": "挑战",
+  "note_count": 991,
+  "note_types": {
+    "tap": 966,
+    "hold": 22,
+    "roll": 3
+  },
+  "required_presses": 1003,
+  "double_accents": 23,
+  "peak_objects_per_second": 10,
+  "sections": [
+    {
+      "start": 0.372565,
+      "end": 6.298528,
+      "type": "引入",
+      "focus": "bass",
+      "load": 0.42
+    },
+    {
+      "start": 6.298528,
+      "end": 24.076415,
+      "type": "器乐短组",
+      "focus": "drums",
+      "load": 0.88
+    },
+    {
+      "start": 24.076415,
+      "end": 35.92834,
+      "type": "应答 A",
+      "focus": "response",
+      "load": 0.61
+    },
+    {
+      "start": 35.92834,
+      "end": 47.780265,
+      "type": "推进 A",
+      "focus": "mixed",
+      "load": 0.81
+    },
+    {
+      "start": 47.780265,
+      "end": 71.484115,
+      "type": "短组展开",
+      "focus": "response",
+      "load": 0.72
+    },
+    {
+      "start": 71.484115,
+      "end": 95.187965,
+      "type": "密集 A",
+      "focus": "drums",
+      "load": 1
+    },
+    {
+      "start": 95.187965,
+      "end": 107.03989,
+      "type": "换气",
+      "focus": "harmony",
+      "load": 0.44
+    },
+    {
+      "start": 107.03989,
+      "end": 124.817778,
+      "type": "回归应答",
+      "focus": "mixed",
+      "load": 0.78
+    },
+    {
+      "start": 124.817778,
+      "end": 142.595665,
+      "type": "密集 B",
+      "focus": "drums",
+      "load": 0.98
+    },
+    {
+      "start": 142.595665,
+      "end": 154.44759,
+      "type": "间奏",
+      "focus": "harmony",
+      "load": 0.5
+    },
+    {
+      "start": 154.44759,
+      "end": 166.299515,
+      "type": "再推进",
+      "focus": "response",
+      "load": 0.72
+    },
+    {
+      "start": 166.299515,
+      "end": 184.077403,
+      "type": "高峰",
+      "focus": "drums",
+      "load": 1
+    },
+    {
+      "start": 184.077403,
+      "end": 201.85529,
+      "type": "回归收束",
+      "focus": "mixed",
+      "load": 0.85
+    },
+    {
+      "start": 201.85529,
+      "end": 213.707215,
+      "type": "收尾",
+      "focus": "bass",
+      "load": 0.35
+    }
+  ],
+  "audio_sha256": "4a417547676262a398d140e58e5f13561fa21c00da0ce8b1bdcde16b97e737e7",
+  "chart_status": "全量重编：录音起音候选、按声部组织短组、分段疏密与持续和声长按；待逐拍实听与手机手感验收",
+  "chart_revision": "0.8.0"
+}

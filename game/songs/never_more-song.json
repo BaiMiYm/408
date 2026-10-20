@@ -1,0 +1,111 @@
+{
+  "schema_version": 2,
+  "id": "never_more",
+  "title": "Never More",
+  "artist": "平田志穂子",
+  "audio": "res://assets/never_more.mp3",
+  "bpm": 92.9985,
+  "bpm_selection": "根据本地录音分段鼓点估计并作全曲网格拟合，非官方标注",
+  "duration": 397.480285644531,
+  "grid_offset_seconds": 0.197414,
+  "difficulty": "进阶",
+  "difficulty_label": "进阶",
+  "note_count": 380,
+  "note_types": {
+    "tap": 330,
+    "hold": 50,
+    "roll": 0
+  },
+  "required_presses": 380,
+  "double_accents": 11,
+  "peak_objects_per_second": 4,
+  "sections": [
+    {
+      "start": 0.197414,
+      "end": 20.842908,
+      "type": "引入",
+      "focus": "harmony",
+      "load": 0.18
+    },
+    {
+      "start": 20.842908,
+      "end": 62.133897,
+      "type": "旋律应答 A",
+      "focus": "response",
+      "load": 0.44
+    },
+    {
+      "start": 62.133897,
+      "end": 113.747633,
+      "type": "展开 A",
+      "focus": "harmony",
+      "load": 0.64
+    },
+    {
+      "start": 113.747633,
+      "end": 134.393127,
+      "type": "间奏留白",
+      "focus": "harmony",
+      "load": 0.25
+    },
+    {
+      "start": 134.393127,
+      "end": 165.361368,
+      "type": "旋律应答 B",
+      "focus": "response",
+      "load": 0.46
+    },
+    {
+      "start": 165.361368,
+      "end": 216.975104,
+      "type": "展开 B",
+      "focus": "mixed",
+      "load": 0.68
+    },
+    {
+      "start": 216.975104,
+      "end": 247.943345,
+      "type": "缓冲",
+      "focus": "harmony",
+      "load": 0.2
+    },
+    {
+      "start": 247.943345,
+      "end": 268.58884,
+      "type": "器乐桥段",
+      "focus": "response",
+      "load": 0.46
+    },
+    {
+      "start": 268.58884,
+      "end": 289.234334,
+      "type": "持续与应答",
+      "focus": "harmony",
+      "load": 0.36
+    },
+    {
+      "start": 289.234334,
+      "end": 351.170817,
+      "type": "末段展开",
+      "focus": "mixed",
+      "load": 0.73
+    },
+    {
+      "start": 351.170817,
+      "end": 371.816311,
+      "type": "渐弱",
+      "focus": "harmony",
+      "load": 0.26
+    },
+    {
+      "start": 371.816311,
+      "end": 397.480286,
+      "type": "尾奏留白",
+      "focus": "harmony",
+      "load": 0.08
+    }
+  ],
+  "audio_sha256": "7f7ab9d6f75621fd2e145ce42905cd91ccbcaacaf8baff413f2b800a24fc23fc",
+  "chart_status": "全量重编：录音起音候选、按声部组织短组、分段疏密与持续和声长按；待逐拍实听与手机手感验收",
+  "chart_revision": "0.8.0"
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": 2,
+  "id": "kaiba_mass",
+  "title": "海馬成長痛 × Mass Destruction",
+  "artist": "雨宫十尃",
+  "audio": "res://assets/kaiba_mass.mp3",
+  "bpm": 140.008,
+  "bpm_selection": "根据本地录音分段鼓点估计并作全曲网格拟合，非官方标注",
+  "duration": 178.514984130859,
+  "grid_offset_seconds": 0.074568,
+  "difficulty": "挑战",
+  "difficulty_label": "挑战",
+  "note_count": 618,
+  "note_types": {
+    "tap": 597,
+    "hold": 18,
+    "roll": 3
+  },
+  "required_presses": 633,
+  "double_accents": 15,
+  "peak_objects_per_second": 8,
+  "sections": [
+    {
+      "start": 0.074568,
+      "end": 13.78807,
+      "type": "引入",
+      "focus": "response",
+      "load": 0.38
+    },
+    {
+      "start": 13.78807,
+      "end": 41.215074,
+      "type": "短组推进",
+      "focus": "mixed",
+      "load": 0.78
+    },
+    {
+      "start": 41.215074,
+      "end": 54.928576,
+      "type": "鼓组强调",
+      "focus": "drums",
+      "load": 0.94
+    },
+    {
+      "start": 54.928576,
+      "end": 82.355581,
+      "type": "应答与持续",
+      "focus": "harmony",
+      "load": 0.58
+    },
+    {
+      "start": 82.355581,
+      "end": 96.069083,
+      "type": "高峰",
+      "focus": "drums",
+      "load": 1
+    },
+    {
+      "start": 96.069083,
+      "end": 109.782585,
+      "type": "音色转换",
+      "focus": "response",
+      "load": 0.62
+    },
+    {
+      "start": 109.782585,
+      "end": 137.209589,
+      "type": "回归短组",
+      "focus": "mixed",
+      "load": 0.79
+    },
+    {
+      "start": 137.209589,
+      "end": 150.923091,
+      "type": "疏密交接",
+      "focus": "harmony",
+      "load": 0.52
+    },
+    {
+      "start": 150.923091,
+      "end": 164.636593,
+      "type": "末段推进",
+      "focus": "drums",
+      "load": 0.9
+    },
+    {
+      "start": 164.636593,
+      "end": 178.350095,
+      "type": "收尾",
+      "focus": "harmony",
+      "load": 0.18
+    }
+  ],
+  "audio_sha256": "7430c8a57bce096535537a59832141687827ec290adfc4e8e96d8ab57b1092fa",
+  "chart_status": "全量重编：录音起音候选、按声部组织短组、分段疏密与持续和声长按；待逐拍实听与手机手感验收",
+  "chart_revision": "0.8.0"
+}
