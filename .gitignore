@@ -19,3 +19,17 @@ __pycache__/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Godot 缓存、导出与本地音频（不随代码共享）
+**/.godot/
+*.apk
+*.aab
+*.keystore
+export_credentials.cfg
+game/assets/*.mp3
+game/assets/*.wav
+game/assets/*.ogg
+game/preview*.png
+game/preview*.png.import
+.local/
+game/assets/*.import
