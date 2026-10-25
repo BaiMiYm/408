@@ -33,3 +33,5 @@ game/preview*.png
 game/preview*.png.import
 .local/
 game/assets/*.import
+game/assets/fonts/*.import
+game/icon.svg.import

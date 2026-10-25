@@ -8,7 +8,7 @@
   "duration": 136.216217041016,
   "grid_offset_seconds": 0.204,
   "difficulty": "NORMAL+",
-  "note_count": 274,
+  "note_count": 339,
   "sections": [
     {
       "start": 0.204,
@@ -81,16 +81,19 @@
       "load": 0.18
     }
   ],
-  "chart_status": "全量重编：录音起音候选、按声部组织短组、分段疏密与持续和声长按；待逐拍实听与手机手感验收",
+  "chart_status": "参考三段本地视频的短组、持续交接与留白方式修订；选点由本曲音频候选支持，待真人同步试听验收",
   "audio_sha256": "3102ad7060f115e4a5e0767c8cff46d3be01e8af87c40e029efed352d16a00b2",
   "schema_version": 2,
   "note_types": {
-    "tap": 260,
-    "hold": 14,
-    "roll": 0
+    "tap": 328,
+    "hold": 9,
+    "roll": 2
   },
-  "required_presses": 274,
-  "double_accents": 18,
-  "chart_revision": "0.8.0",
-  "peak_objects_per_second": 5
+  "required_presses": 345,
+  "double_accents": 10,
+  "chart_revision": "0.9.0",
+  "peak_objects_per_second": 7,
+  "overlapping_hold_pairs": 1,
+  "hold_tap_interactions": 6,
+  "repeated_source_phrases": 4
 }

@@ -57,6 +57,7 @@ func _run() -> void:
 			scene._finish()
 			assert(scene.mode == "result")
 			scene._pointer(Vector2(640, 550))
+			scene._advance_intro(3.0)
 			assert(scene.chart_index == difficulty and scene.score == 0)
 			scene.music.stop()
 			scene.mode = "menu"

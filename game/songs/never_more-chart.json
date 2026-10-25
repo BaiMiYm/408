@@ -1,62 +1,24 @@
 [
   {
     "time": 2.455515,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "引入"
   },
   {
     "time": 2.778101,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "引入"
   },
   {
-    "time": 4.39103,
-    "lane": 1,
-    "kind": "tap",
-    "section": "引入"
-  },
-  {
-    "time": 5.358788,
-    "lane": 1,
+    "time": 6.326545,
+    "lane": 0,
     "kind": "tap",
     "section": "引入"
   },
   {
     "time": 6.649131,
-    "lane": 1,
-    "kind": "tap",
-    "section": "引入"
-  },
-  {
-    "time": 7.939474,
-    "lane": 1,
-    "kind": "tap",
-    "section": "引入"
-  },
-  {
-    "time": 8.26206,
-    "lane": 1,
-    "kind": "tap",
-    "section": "引入"
-  },
-  {
-    "time": 10.842747,
-    "lane": 1,
-    "kind": "tap",
-    "section": "引入"
-  },
-  {
-    "time": 11.165333,
-    "end_time": 12.13309,
-    "length_beats": 1.5,
-    "lane": 1,
-    "kind": "hold",
-    "section": "引入"
-  },
-  {
-    "time": 12.455676,
     "lane": 0,
     "kind": "tap",
     "section": "引入"
@@ -68,46 +30,22 @@
     "section": "引入"
   },
   {
-    "time": 14.391191,
-    "lane": 0,
-    "kind": "tap",
-    "section": "引入"
-  },
-  {
-    "time": 15.036363,
-    "lane": 0,
-    "kind": "tap",
-    "section": "引入"
-  },
-  {
-    "time": 15.681535,
-    "lane": 0,
-    "kind": "tap",
-    "section": "引入"
-  },
-  {
-    "time": 17.61705,
-    "lane": 0,
-    "kind": "tap",
-    "section": "引入"
-  },
-  {
-    "time": 18.907393,
-    "end_time": 19.552565,
-    "length_beats": 1.0,
-    "lane": 0,
+    "time": 18.262221,
+    "end_time": 19.229979,
+    "length_beats": 1.5,
+    "lane": 1,
     "kind": "hold",
     "section": "引入"
   },
   {
     "time": 20.197737,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "引入"
   },
   {
     "time": 20.520322,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "引入"
   },
@@ -118,8 +56,26 @@
     "section": "旋律应答 A"
   },
   {
+    "time": 21.48808,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 21.810666,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
     "time": 22.133252,
     "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 23.746181,
+    "lane": 1,
     "kind": "tap",
     "section": "旋律应答 A"
   },
@@ -136,35 +92,21 @@
     "section": "旋律应答 A"
   },
   {
-    "time": 24.713938,
-    "lane": 1,
-    "kind": "tap",
-    "section": "旋律应答 A"
-  },
-  {
-    "time": 26.972039,
-    "lane": 0,
-    "kind": "tap",
-    "section": "旋律应答 A"
-  },
-  {
-    "time": 27.294625,
-    "lane": 0,
-    "kind": "tap",
-    "section": "旋律应答 A"
-  },
-  {
     "time": 27.939797,
     "lane": 0,
     "kind": "tap",
     "section": "旋律应答 A"
   },
   {
-    "time": 28.584969,
-    "end_time": 29.875312,
-    "length_beats": 2.0,
+    "time": 28.262383,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 28.584969,
+    "lane": 0,
+    "kind": "tap",
     "section": "旋律应答 A"
   },
   {
@@ -180,14 +122,20 @@
     "section": "旋律应答 A"
   },
   {
-    "time": 32.133413,
+    "time": 33.423756,
     "lane": 0,
     "kind": "tap",
     "section": "旋律应答 A"
   },
   {
-    "time": 33.423756,
-    "lane": 1,
+    "time": 33.746342,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 34.068928,
+    "lane": 0,
     "kind": "tap",
     "section": "旋律应答 A"
   },
@@ -204,8 +152,32 @@
     "section": "旋律应答 A"
   },
   {
-    "time": 35.681857,
+    "time": 35.036686,
     "lane": 1,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 35.359271,
+    "lane": 1,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 36.649615,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 36.972201,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 37.294787,
+    "lane": 0,
     "kind": "tap",
     "section": "旋律应答 A"
   },
@@ -222,26 +194,32 @@
     "section": "旋律应答 A"
   },
   {
-    "time": 39.552887,
-    "lane": 1,
-    "kind": "tap",
-    "section": "旋律应答 A"
-  },
-  {
-    "time": 39.875473,
-    "lane": 1,
-    "kind": "tap",
-    "section": "旋律应答 A"
-  },
-  {
-    "time": 40.843231,
+    "time": 38.58513,
     "lane": 0,
     "kind": "tap",
     "section": "旋律应答 A"
   },
   {
-    "time": 41.165817,
-    "lane": 1,
+    "time": 38.907716,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 41.810988,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 42.133574,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 42.45616,
+    "lane": 0,
     "kind": "tap",
     "section": "旋律应答 A"
   },
@@ -252,20 +230,26 @@
     "section": "旋律应答 A"
   },
   {
-    "time": 43.746504,
-    "lane": 1,
-    "kind": "tap",
-    "section": "旋律应答 A"
-  },
-  {
     "time": 44.714261,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "旋律应答 A"
   },
   {
     "time": 45.036847,
     "lane": 1,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 46.972362,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 47.294948,
+    "lane": 0,
     "kind": "tap",
     "section": "旋律应答 A"
   },
@@ -289,60 +273,48 @@
   },
   {
     "time": 48.907877,
-    "lane": 1,
-    "kind": "tap",
-    "section": "旋律应答 A"
-  },
-  {
-    "time": 51.165978,
     "lane": 0,
     "kind": "tap",
     "section": "旋律应答 A"
   },
   {
-    "time": 51.488564,
-    "lane": 1,
+    "time": 49.230463,
+    "lane": 0,
     "kind": "tap",
     "section": "旋律应答 A"
   },
   {
-    "time": 51.81115,
+    "time": 49.553049,
     "lane": 0,
     "kind": "tap",
     "section": "旋律应答 A"
   },
   {
     "time": 54.069251,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "旋律应答 A"
   },
   {
     "time": 54.391836,
-    "lane": 1,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 54.714422,
+    "lane": 0,
     "kind": "tap",
     "section": "旋律应答 A"
   },
   {
     "time": 55.037008,
-    "lane": 0,
-    "kind": "tap",
-    "section": "旋律应答 A"
-  },
-  {
-    "time": 55.359594,
     "lane": 1,
     "kind": "tap",
     "section": "旋律应答 A"
   },
   {
-    "time": 56.327352,
-    "lane": 0,
-    "kind": "tap",
-    "section": "旋律应答 A"
-  },
-  {
-    "time": 57.940281,
+    "time": 55.359594,
     "lane": 1,
     "kind": "tap",
     "section": "旋律应答 A"
@@ -356,54 +328,62 @@
     "section": "旋律应答 A"
   },
   {
-    "time": 62.133897,
-    "end_time": 64.714584,
-    "length_beats": 4.0,
+    "time": 59.875796,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 A"
+  },
+  {
+    "time": 62.779069,
+    "end_time": 65.037169,
+    "length_beats": 3.5,
     "lane": 1,
     "kind": "hold",
     "section": "展开 A"
   },
   {
-    "time": 62.779069,
+    "time": 64.069412,
+    "end_time": 65.359755,
+    "length_beats": 2.0,
     "lane": 0,
-    "kind": "tap",
+    "kind": "hold",
     "section": "展开 A"
   },
   {
-    "time": 63.101654,
-    "lane": 0,
-    "kind": "tap",
-    "section": "展开 A"
-  },
-  {
-    "time": 65.037169,
+    "time": 65.682341,
     "lane": 1,
     "kind": "tap",
     "section": "展开 A"
   },
   {
-    "time": 65.682341,
-    "lane": 0,
+    "time": 66.004927,
+    "lane": 1,
     "kind": "tap",
     "section": "展开 A"
   },
   {
-    "time": 66.004927,
-    "end_time": 66.972685,
+    "time": 66.327513,
+    "end_time": 67.29527,
     "length_beats": 1.5,
     "lane": 0,
     "kind": "hold",
     "section": "展开 A"
   },
   {
-    "time": 67.617856,
+    "time": 66.327513,
     "lane": 1,
     "kind": "tap",
     "section": "展开 A"
   },
   {
-    "time": 69.553371,
-    "lane": 1,
+    "time": 67.940442,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 68.263028,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
@@ -415,90 +395,142 @@
   },
   {
     "time": 70.521129,
-    "end_time": 72.134058,
-    "length_beats": 2.5,
     "lane": 1,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 70.843715,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 71.811472,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 72.134058,
+    "lane": 1,
+    "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 72.77923,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 73.101816,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 73.424402,
-    "lane": 1,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 73.746987,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 74.392159,
-    "lane": 1,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 74.714745,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 75.037331,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 75.359917,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
   {
-    "time": 76.005088,
+    "time": 76.65026,
     "lane": 1,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 76.972846,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 77.295432,
-    "end_time": 77.940603,
-    "length_beats": 1.0,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 77.618018,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 77.940603,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 80.52129,
+    "end_time": 81.489048,
+    "length_beats": 1.5,
     "lane": 0,
     "kind": "hold",
     "section": "展开 A"
   },
   {
-    "time": 77.940603,
-    "lane": 1,
-    "kind": "tap",
-    "section": "展开 A"
-  },
-  {
-    "time": 78.908361,
-    "lane": 1,
-    "kind": "tap",
-    "section": "展开 A"
-  },
-  {
-    "time": 81.166462,
-    "end_time": 81.811634,
+    "time": 80.52129,
+    "end_time": 81.166462,
     "length_beats": 1.0,
-    "lane": 0,
+    "lane": 1,
     "kind": "hold",
     "section": "展开 A"
   },
   {
     "time": 82.134219,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 82.456805,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 83.101977,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 83.424563,
     "lane": 0,
     "kind": "tap",
     "section": "展开 A"
@@ -510,14 +542,40 @@
     "section": "展开 A"
   },
   {
-    "time": 85.037492,
-    "lane": 0,
+    "time": 84.39232,
+    "end_time": 85.360078,
+    "length_beats": 1.5,
+    "lane": 1,
+    "kind": "hold",
+    "section": "展开 A"
+  },
+  {
+    "time": 86.327835,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 86.650421,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 86.973007,
+    "lane": 1,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 88.263351,
-    "lane": 1,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 88.585936,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
@@ -528,28 +586,44 @@
     "section": "展开 A"
   },
   {
-    "time": 89.231108,
+    "time": 89.87628,
     "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 90.198866,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 90.521451,
-    "end_time": 91.489209,
-    "length_beats": 1.5,
-    "lane": 1,
-    "kind": "hold",
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 90.844037,
+    "lane": 0,
+    "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 92.456967,
     "lane": 1,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 92.779552,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 94.069896,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
@@ -561,61 +635,109 @@
   },
   {
     "time": 95.037653,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 95.360239,
-    "end_time": 97.295754,
-    "length_beats": 3.0,
-    "lane": 1,
-    "kind": "hold",
+    "lane": 0,
+    "kind": "tap",
     "section": "展开 A"
   },
   {
-    "time": 98.586098,
-    "end_time": 99.231269,
-    "length_beats": 1.0,
-    "lane": 1,
-    "kind": "hold",
+    "time": 95.682825,
+    "lane": 0,
+    "kind": "tap",
     "section": "展开 A"
   },
   {
-    "time": 99.553855,
+    "time": 96.005411,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 96.650583,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 96.973168,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 100.199027,
     "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 100.521613,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
   {
     "time": 100.844199,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 101.166784,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 101.811956,
+    "end_time": 102.457128,
+    "length_beats": 1.0,
+    "lane": 1,
+    "kind": "hold",
+    "section": "展开 A"
+  },
+  {
+    "time": 102.779714,
     "lane": 1,
     "kind": "tap",
     "section": "展开 A"
   },
   {
-    "time": 102.134542,
-    "end_time": 103.1023,
-    "length_beats": 1.5,
+    "time": 103.1023,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 104.715229,
+    "end_time": 105.3604,
+    "length_beats": 1.0,
     "lane": 0,
     "kind": "hold",
     "section": "展开 A"
   },
   {
     "time": 104.715229,
+    "end_time": 105.3604,
+    "length_beats": 1.0,
     "lane": 1,
+    "kind": "hold",
+    "section": "展开 A"
+  },
+  {
+    "time": 106.005572,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
   {
-    "time": 105.682986,
-    "lane": 0,
+    "time": 106.97333,
+    "lane": 1,
     "kind": "tap",
     "section": "展开 A"
   },
@@ -626,35 +748,39 @@
     "section": "展开 A"
   },
   {
-    "time": 107.941087,
-    "lane": 1,
-    "kind": "tap",
-    "section": "展开 A"
-  },
-  {
     "time": 108.586259,
-    "lane": 1,
-    "kind": "tap",
-    "section": "展开 A"
-  },
-  {
-    "time": 109.231431,
-    "end_time": 111.166946,
-    "length_beats": 3.0,
+    "end_time": 109.231431,
+    "length_beats": 1.0,
     "lane": 0,
     "kind": "hold",
     "section": "展开 A"
   },
   {
-    "time": 110.84436,
+    "time": 108.586259,
+    "end_time": 110.84436,
+    "length_beats": 3.5,
     "lane": 1,
+    "kind": "hold",
+    "section": "展开 A"
+  },
+  {
+    "time": 109.554017,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 A"
   },
   {
-    "time": 112.134703,
+    "time": 110.84436,
     "lane": 0,
     "kind": "tap",
+    "section": "展开 A"
+  },
+  {
+    "time": 111.489532,
+    "end_time": 112.779875,
+    "length_beats": 2.0,
+    "lane": 0,
+    "kind": "hold",
     "section": "展开 A"
   },
   {
@@ -670,12 +796,6 @@
     "section": "展开 A"
   },
   {
-    "time": 114.71539,
-    "lane": 1,
-    "kind": "tap",
-    "section": "间奏留白"
-  },
-  {
     "time": 115.683148,
     "lane": 0,
     "kind": "tap",
@@ -688,7 +808,25 @@
     "section": "间奏留白"
   },
   {
+    "time": 117.296077,
+    "lane": 1,
+    "kind": "tap",
+    "section": "间奏留白"
+  },
+  {
     "time": 117.618663,
+    "lane": 1,
+    "kind": "tap",
+    "section": "间奏留白"
+  },
+  {
+    "time": 118.263834,
+    "lane": 1,
+    "kind": "tap",
+    "section": "间奏留白"
+  },
+  {
+    "time": 118.58642,
     "lane": 1,
     "kind": "tap",
     "section": "间奏留白"
@@ -702,34 +840,36 @@
     "section": "间奏留白"
   },
   {
-    "time": 121.167107,
-    "lane": 0,
-    "kind": "tap",
-    "section": "间奏留白"
-  },
-  {
-    "time": 122.45745,
-    "end_time": 123.102622,
+    "time": 121.812279,
+    "end_time": 122.45745,
     "length_beats": 1.0,
-    "lane": 1,
+    "lane": 0,
     "kind": "hold",
     "section": "间奏留白"
   },
   {
-    "time": 123.747794,
-    "lane": 0,
+    "time": 122.45745,
+    "lane": 1,
     "kind": "tap",
     "section": "间奏留白"
   },
   {
-    "time": 125.038137,
+    "time": 127.94141,
+    "end_time": 128.909167,
+    "length_beats": 1.5,
     "lane": 0,
-    "kind": "tap",
+    "kind": "hold",
     "section": "间奏留白"
   },
   {
     "time": 128.586582,
-    "lane": 0,
+    "lane": 1,
+    "kind": "tap",
+    "section": "间奏留白"
+  },
+  {
+    "time": 128.909167,
+    "lane": 1,
     "kind": "tap",
     "section": "间奏留白"
   },
@@ -737,38 +877,16 @@
     "time": 129.231753,
     "end_time": 129.876925,
     "length_beats": 1.0,
-    "lane": 0,
+    "lane": 1,
     "kind": "hold",
     "section": "间奏留白"
   },
   {
-    "time": 130.199511,
-    "lane": 1,
-    "kind": "tap",
-    "section": "间奏留白"
-  },
-  {
-    "time": 131.489854,
+    "time": 130.522097,
+    "end_time": 131.167268,
+    "length_beats": 1.0,
     "lane": 0,
-    "kind": "tap",
-    "section": "间奏留白"
-  },
-  {
-    "time": 133.102783,
-    "lane": 1,
-    "kind": "tap",
-    "section": "间奏留白"
-  },
-  {
-    "time": 133.747955,
-    "lane": 1,
-    "kind": "tap",
-    "section": "间奏留白"
-  },
-  {
-    "time": 134.070541,
-    "lane": 1,
-    "kind": "tap",
+    "kind": "hold",
     "section": "间奏留白"
   },
   {
@@ -778,57 +896,49 @@
     "section": "旋律应答 B"
   },
   {
-    "time": 136.651228,
-    "lane": 1,
-    "kind": "tap",
-    "section": "旋律应答 B"
-  },
-  {
-    "time": 138.264157,
-    "lane": 0,
-    "kind": "tap",
-    "section": "旋律应答 B"
-  },
-  {
-    "time": 138.909329,
+    "time": 135.360884,
     "lane": 0,
     "kind": "tap",
     "section": "旋律应答 B"
   },
   {
     "time": 139.5545,
-    "end_time": 141.16743,
-    "length_beats": 2.5,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "旋律应答 B"
+  },
+  {
+    "time": 139.877086,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 B"
+  },
+  {
+    "time": 140.199672,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 B"
+  },
+  {
+    "time": 140.522258,
+    "lane": 0,
+    "kind": "tap",
     "section": "旋律应答 B"
   },
   {
     "time": 141.490015,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "旋律应答 B"
   },
   {
     "time": 141.812601,
-    "lane": 1,
-    "kind": "tap",
-    "section": "旋律应答 B"
-  },
-  {
-    "time": 142.457773,
     "lane": 0,
     "kind": "tap",
     "section": "旋律应答 B"
   },
   {
-    "time": 143.102945,
-    "lane": 1,
-    "kind": "tap",
-    "section": "旋律应答 B"
-  },
-  {
-    "time": 144.393288,
+    "time": 145.03846,
     "lane": 0,
     "kind": "tap",
     "section": "旋律应答 B"
@@ -841,19 +951,7 @@
   },
   {
     "time": 145.683632,
-    "lane": 1,
-    "kind": "tap",
-    "section": "旋律应答 B"
-  },
-  {
-    "time": 146.651389,
     "lane": 0,
-    "kind": "tap",
-    "section": "旋律应答 B"
-  },
-  {
-    "time": 146.973975,
-    "lane": 1,
     "kind": "tap",
     "section": "旋律应答 B"
   },
@@ -870,17 +968,39 @@
     "section": "旋律应答 B"
   },
   {
-    "time": 149.232076,
+    "time": 148.264318,
+    "lane": 1,
+    "kind": "tap",
+    "section": "旋律应答 B"
+  },
+  {
+    "time": 148.586904,
+    "lane": 1,
+    "kind": "tap",
+    "section": "旋律应答 B"
+  },
+  {
+    "time": 149.877248,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 B"
+  },
+  {
+    "time": 150.199833,
     "lane": 0,
     "kind": "tap",
     "section": "旋律应答 B"
   },
   {
     "time": 150.522419,
-    "end_time": 151.490177,
-    "length_beats": 1.5,
-    "lane": 1,
-    "kind": "hold",
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 B"
+  },
+  {
+    "time": 150.845005,
+    "lane": 0,
+    "kind": "tap",
     "section": "旋律应答 B"
   },
   {
@@ -891,18 +1011,18 @@
   },
   {
     "time": 152.135348,
-    "lane": 1,
-    "kind": "tap",
-    "section": "旋律应答 B"
-  },
-  {
-    "time": 153.748278,
     "lane": 0,
     "kind": "tap",
     "section": "旋律应答 B"
   },
   {
-    "time": 154.716035,
+    "time": 152.457934,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 B"
+  },
+  {
+    "time": 155.361207,
     "lane": 0,
     "kind": "tap",
     "section": "旋律应答 B"
@@ -915,12 +1035,6 @@
   },
   {
     "time": 156.006379,
-    "lane": 1,
-    "kind": "tap",
-    "section": "旋律应答 B"
-  },
-  {
-    "time": 156.974136,
     "lane": 0,
     "kind": "tap",
     "section": "旋律应答 B"
@@ -933,24 +1047,6 @@
   },
   {
     "time": 158.909651,
-    "lane": 0,
-    "kind": "tap",
-    "section": "旋律应答 B"
-  },
-  {
-    "time": 159.554823,
-    "lane": 0,
-    "kind": "tap",
-    "section": "旋律应答 B"
-  },
-  {
-    "time": 159.877409,
-    "lane": 1,
-    "kind": "tap",
-    "section": "旋律应答 B"
-  },
-  {
-    "time": 160.199995,
     "lane": 1,
     "kind": "tap",
     "section": "旋律应答 B"
@@ -963,7 +1059,7 @@
   },
   {
     "time": 162.458096,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "旋律应答 B"
   },
@@ -974,13 +1070,19 @@
     "section": "旋律应答 B"
   },
   {
+    "time": 163.103267,
+    "lane": 0,
+    "kind": "tap",
+    "section": "旋律应答 B"
+  },
+  {
+    "time": 163.425853,
+    "lane": 1,
+    "kind": "tap",
+    "section": "旋律应答 B"
+  },
+  {
     "time": 163.748439,
-    "lane": 0,
-    "kind": "tap",
-    "section": "旋律应答 B"
-  },
-  {
-    "time": 165.038782,
     "lane": 1,
     "kind": "tap",
     "section": "旋律应答 B"
@@ -989,30 +1091,30 @@
     "time": 165.361368,
     "lane": 0,
     "kind": "tap",
-    "section": "展开 B",
-    "accent": true
+    "section": "展开 B"
   },
   {
-    "time": 165.361368,
-    "lane": 1,
+    "time": 165.683954,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 166.00654,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 B",
     "accent": true
   },
   {
     "time": 166.00654,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
-    "section": "展开 B"
+    "section": "展开 B",
+    "accent": true
   },
   {
     "time": 166.329126,
-    "lane": 0,
-    "kind": "tap",
-    "section": "展开 B"
-  },
-  {
-    "time": 166.651712,
     "lane": 0,
     "kind": "tap",
     "section": "展开 B"
@@ -1024,35 +1126,85 @@
     "section": "展开 B"
   },
   {
+    "time": 167.942055,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 168.264641,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
     "time": 169.232398,
-    "end_time": 170.200156,
-    "length_beats": 1.5,
+    "end_time": 170.522742,
+    "length_beats": 2.0,
     "lane": 0,
     "kind": "hold",
     "section": "展开 B"
   },
   {
-    "time": 170.200156,
+    "time": 170.522742,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 170.845328,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 171.167914,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 171.490499,
     "lane": 1,
     "kind": "tap",
     "section": "展开 B"
   },
   {
     "time": 173.103429,
-    "end_time": 175.684115,
-    "length_beats": 4.0,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 173.103429,
+    "end_time": 175.36153,
+    "length_beats": 3.5,
+    "lane": 1,
+    "kind": "hold",
+    "section": "展开 B"
+  },
+  {
+    "time": 173.426014,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 175.038944,
+    "end_time": 176.329287,
+    "length_beats": 2.0,
     "lane": 0,
     "kind": "hold",
     "section": "展开 B"
   },
   {
-    "time": 174.071186,
-    "lane": 1,
+    "time": 176.651873,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 B"
   },
   {
-    "time": 176.651873,
+    "time": 176.974459,
     "lane": 0,
     "kind": "tap",
     "section": "展开 B"
@@ -1076,36 +1228,50 @@
     "section": "展开 B"
   },
   {
-    "time": 180.200317,
+    "time": 178.909974,
     "lane": 0,
     "kind": "tap",
-    "section": "展开 B",
-    "accent": true
+    "section": "展开 B"
   },
   {
-    "time": 180.200317,
-    "lane": 1,
+    "time": 179.23256,
+    "lane": 0,
     "kind": "tap",
-    "section": "展开 B",
-    "accent": true
+    "section": "展开 B"
   },
   {
     "time": 181.168075,
-    "end_time": 182.458418,
-    "length_beats": 2.0,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 181.490661,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 181.813247,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 182.458418,
+    "lane": 0,
+    "kind": "tap",
     "section": "展开 B"
   },
   {
     "time": 182.781004,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 B"
   },
   {
     "time": 183.10359,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 B"
   },
@@ -1124,13 +1290,7 @@
     "accent": true
   },
   {
-    "time": 186.006863,
-    "lane": 0,
-    "kind": "tap",
-    "section": "展开 B"
-  },
-  {
-    "time": 186.329448,
+    "time": 185.684277,
     "lane": 0,
     "kind": "tap",
     "section": "展开 B"
@@ -1142,8 +1302,14 @@
     "section": "展开 B"
   },
   {
+    "time": 187.619792,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
     "time": 187.942378,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "展开 B"
   },
@@ -1161,18 +1327,6 @@
   },
   {
     "time": 188.910135,
-    "lane": 1,
-    "kind": "tap",
-    "section": "展开 B"
-  },
-  {
-    "time": 189.877893,
-    "lane": 1,
-    "kind": "tap",
-    "section": "展开 B"
-  },
-  {
-    "time": 191.490822,
     "lane": 0,
     "kind": "tap",
     "section": "展开 B"
@@ -1196,27 +1350,43 @@
     "section": "展开 B"
   },
   {
+    "time": 193.748923,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
     "time": 194.071509,
     "lane": 0,
     "kind": "tap",
     "section": "展开 B"
   },
   {
-    "time": 195.039266,
-    "end_time": 196.007024,
-    "length_beats": 1.5,
-    "lane": 0,
-    "kind": "hold",
-    "section": "展开 B"
-  },
-  {
-    "time": 196.007024,
+    "time": 194.394095,
     "lane": 1,
     "kind": "tap",
     "section": "展开 B"
   },
   {
-    "time": 196.652196,
+    "time": 194.71668,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 195.039266,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 195.361852,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 197.297367,
     "lane": 0,
     "kind": "tap",
     "section": "展开 B"
@@ -1228,7 +1398,7 @@
     "section": "展开 B"
   },
   {
-    "time": 198.265125,
+    "time": 197.942539,
     "lane": 0,
     "kind": "tap",
     "section": "展开 B"
@@ -1240,8 +1410,20 @@
     "section": "展开 B"
   },
   {
+    "time": 199.555468,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
     "time": 199.878054,
-    "lane": 1,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 200.845812,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 B"
   },
@@ -1252,7 +1434,19 @@
     "section": "展开 B"
   },
   {
-    "time": 203.103912,
+    "time": 201.813569,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 202.136155,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 202.458741,
     "lane": 1,
     "kind": "tap",
     "section": "展开 B"
@@ -1270,8 +1464,14 @@
     "section": "展开 B"
   },
   {
-    "time": 205.039428,
-    "lane": 1,
+    "time": 204.07167,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 204.394256,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 B"
   },
@@ -1283,21 +1483,51 @@
   },
   {
     "time": 206.329771,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 B"
   },
   {
     "time": 206.652357,
-    "end_time": 208.265286,
-    "length_beats": 2.5,
     "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 206.652357,
+    "end_time": 207.9427,
+    "length_beats": 2.0,
+    "lane": 1,
     "kind": "hold",
     "section": "展开 B"
   },
   {
+    "time": 206.974943,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 207.297529,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 209.233044,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
     "time": 209.555629,
-    "lane": 1,
+    "lane": 0,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 210.200801,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 B"
   },
@@ -1314,29 +1544,45 @@
     "kind": "tap",
     "section": "展开 B",
     "accent": true
-  },
-  {
-    "time": 211.168559,
-    "lane": 0,
-    "kind": "tap",
-    "section": "展开 B"
   },
   {
     "time": 212.781488,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "展开 B"
   },
   {
     "time": 213.104074,
-    "end_time": 214.071831,
-    "length_beats": 1.5,
-    "lane": 1,
-    "kind": "hold",
+    "lane": 0,
+    "kind": "tap",
     "section": "展开 B"
   },
   {
     "time": 213.749245,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 214.071831,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 214.394417,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 214.717003,
+    "lane": 1,
+    "kind": "tap",
+    "section": "展开 B"
+  },
+  {
+    "time": 215.362175,
     "lane": 0,
     "kind": "tap",
     "section": "展开 B"
@@ -1345,26 +1591,14 @@
     "time": 215.684761,
     "lane": 0,
     "kind": "tap",
-    "section": "展开 B",
-    "accent": true
-  },
-  {
-    "time": 215.684761,
-    "lane": 1,
-    "kind": "tap",
-    "section": "展开 B",
-    "accent": true
+    "section": "展开 B"
   },
   {
     "time": 218.265447,
-    "lane": 1,
-    "kind": "tap",
-    "section": "缓冲"
-  },
-  {
-    "time": 218.910619,
-    "lane": 1,
-    "kind": "tap",
+    "end_time": 219.233205,
+    "length_beats": 1.5,
+    "lane": 0,
+    "kind": "hold",
     "section": "缓冲"
   },
   {
@@ -1375,44 +1609,24 @@
   },
   {
     "time": 220.200962,
-    "end_time": 221.491306,
-    "length_beats": 2.0,
-    "lane": 0,
-    "kind": "hold",
-    "section": "缓冲"
-  },
-  {
-    "time": 223.104235,
     "lane": 0,
     "kind": "tap",
     "section": "缓冲"
   },
   {
-    "time": 224.071993,
-    "lane": 0,
-    "kind": "tap",
-    "section": "缓冲"
-  },
-  {
-    "time": 225.684922,
+    "time": 220.523548,
     "lane": 0,
     "kind": "tap",
     "section": "缓冲"
   },
   {
     "time": 226.652679,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "缓冲"
   },
   {
     "time": 226.975265,
-    "lane": 0,
-    "kind": "tap",
-    "section": "缓冲"
-  },
-  {
-    "time": 229.233366,
     "lane": 1,
     "kind": "tap",
     "section": "缓冲"
@@ -1424,22 +1638,14 @@
     "section": "缓冲"
   },
   {
-    "time": 234.39474,
-    "lane": 0,
+    "time": 236.975427,
+    "lane": 1,
     "kind": "tap",
     "section": "缓冲"
   },
   {
-    "time": 236.975427,
-    "end_time": 237.620598,
-    "length_beats": 1.0,
-    "lane": 0,
-    "kind": "hold",
-    "section": "缓冲"
-  },
-  {
-    "time": 237.943184,
-    "lane": 0,
+    "time": 237.298012,
+    "lane": 1,
     "kind": "tap",
     "section": "缓冲"
   },
@@ -1451,57 +1657,33 @@
   },
   {
     "time": 240.201285,
-    "end_time": 241.491628,
-    "length_beats": 2.0,
     "lane": 0,
+    "kind": "tap",
+    "section": "缓冲"
+  },
+  {
+    "time": 243.104558,
+    "end_time": 243.749729,
+    "length_beats": 1.0,
+    "lane": 1,
     "kind": "hold",
     "section": "缓冲"
   },
   {
-    "time": 242.1368,
-    "lane": 0,
-    "kind": "tap",
-    "section": "缓冲"
-  },
-  {
-    "time": 245.040073,
-    "lane": 1,
-    "kind": "tap",
-    "section": "缓冲"
-  },
-  {
-    "time": 246.330416,
-    "lane": 1,
-    "kind": "tap",
-    "section": "缓冲"
-  },
-  {
-    "time": 247.298174,
-    "lane": 0,
-    "kind": "tap",
-    "section": "缓冲"
-  },
-  {
     "time": 247.62076,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "缓冲"
   },
   {
-    "time": 248.265931,
-    "lane": 0,
-    "kind": "tap",
-    "section": "器乐桥段"
-  },
-  {
-    "time": 249.233689,
+    "time": 249.87886,
     "lane": 0,
     "kind": "tap",
     "section": "器乐桥段"
   },
   {
     "time": 250.201446,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "器乐桥段"
   },
@@ -1512,27 +1694,13 @@
     "section": "器乐桥段"
   },
   {
-    "time": 251.169204,
+    "time": 250.846618,
     "lane": 0,
     "kind": "tap",
     "section": "器乐桥段"
   },
   {
     "time": 252.782133,
-    "end_time": 253.749891,
-    "length_beats": 1.5,
-    "lane": 1,
-    "kind": "hold",
-    "section": "器乐桥段"
-  },
-  {
-    "time": 253.427305,
-    "lane": 0,
-    "kind": "tap",
-    "section": "器乐桥段"
-  },
-  {
-    "time": 254.072477,
     "lane": 0,
     "kind": "tap",
     "section": "器乐桥段"
@@ -1544,16 +1712,26 @@
     "section": "器乐桥段"
   },
   {
-    "time": 256.975749,
-    "end_time": 257.620921,
-    "length_beats": 1.0,
-    "lane": 1,
-    "kind": "hold",
+    "time": 255.36282,
+    "lane": 0,
+    "kind": "tap",
+    "section": "器乐桥段"
+  },
+  {
+    "time": 255.685406,
+    "lane": 0,
+    "kind": "tap",
+    "section": "器乐桥段"
+  },
+  {
+    "time": 256.007992,
+    "lane": 0,
+    "kind": "tap",
     "section": "器乐桥段"
   },
   {
     "time": 257.620921,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "器乐桥段"
   },
@@ -1594,15 +1772,59 @@
     "section": "器乐桥段"
   },
   {
+    "time": 263.10488,
+    "lane": 1,
+    "kind": "tap",
+    "section": "器乐桥段"
+  },
+  {
     "time": 263.427466,
     "end_time": 266.330739,
     "length_beats": 4.5,
+    "lane": 1,
+    "kind": "hold",
+    "section": "器乐桥段"
+  },
+  {
+    "time": 265.362981,
+    "lane": 0,
+    "kind": "tap",
+    "section": "器乐桥段"
+  },
+  {
+    "time": 265.685567,
+    "lane": 0,
+    "kind": "tap",
+    "section": "器乐桥段"
+  },
+  {
+    "time": 266.008153,
+    "lane": 0,
+    "kind": "tap",
+    "section": "器乐桥段"
+  },
+  {
+    "time": 266.330739,
+    "lane": 0,
+    "kind": "tap",
+    "section": "器乐桥段"
+  },
+  {
+    "time": 266.97591,
+    "end_time": 268.58884,
+    "length_beats": 2.5,
     "lane": 0,
     "kind": "hold",
     "section": "器乐桥段"
   },
   {
-    "time": 264.395224,
+    "time": 266.97591,
+    "lane": 1,
+    "kind": "tap",
+    "section": "器乐桥段"
+  },
+  {
+    "time": 267.298496,
     "lane": 1,
     "kind": "tap",
     "section": "器乐桥段"
@@ -1614,55 +1836,37 @@
     "section": "器乐桥段"
   },
   {
-    "time": 268.266254,
-    "lane": 1,
-    "kind": "tap",
-    "section": "器乐桥段"
-  },
-  {
-    "time": 269.556597,
-    "lane": 1,
-    "kind": "tap",
-    "section": "持续与应答"
-  },
-  {
     "time": 270.524355,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "持续与应答"
   },
   {
     "time": 270.846941,
-    "lane": 1,
+    "lane": 0,
+    "kind": "tap",
+    "section": "持续与应答"
+  },
+  {
+    "time": 271.169526,
+    "lane": 0,
     "kind": "tap",
     "section": "持续与应答"
   },
   {
     "time": 271.492112,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "持续与应答"
   },
   {
     "time": 273.105042,
-    "lane": 0,
-    "kind": "tap",
-    "section": "持续与应答"
-  },
-  {
-    "time": 273.427627,
-    "lane": 0,
-    "kind": "tap",
-    "section": "持续与应答"
-  },
-  {
-    "time": 274.072799,
     "lane": 1,
     "kind": "tap",
     "section": "持续与应答"
   },
   {
-    "time": 274.395385,
+    "time": 273.427627,
     "lane": 1,
     "kind": "tap",
     "section": "持续与应答"
@@ -1674,14 +1878,20 @@
     "section": "持续与应答"
   },
   {
-    "time": 276.653486,
-    "lane": 1,
+    "time": 276.008314,
+    "lane": 0,
     "kind": "tap",
     "section": "持续与应答"
   },
   {
-    "time": 277.298658,
-    "lane": 1,
+    "time": 276.3309,
+    "lane": 0,
+    "kind": "tap",
+    "section": "持续与应答"
+  },
+  {
+    "time": 276.653486,
+    "lane": 0,
     "kind": "tap",
     "section": "持续与应答"
   },
@@ -1698,33 +1908,51 @@
     "section": "持续与应答"
   },
   {
+    "time": 279.234173,
+    "lane": 0,
+    "kind": "tap",
+    "section": "持续与应答"
+  },
+  {
+    "time": 279.556759,
+    "lane": 0,
+    "kind": "tap",
+    "section": "持续与应答"
+  },
+  {
     "time": 279.879344,
-    "end_time": 280.524516,
+    "lane": 0,
+    "kind": "tap",
+    "section": "持续与应答"
+  },
+  {
+    "time": 281.814859,
+    "end_time": 282.460031,
     "length_beats": 1.0,
     "lane": 1,
     "kind": "hold",
     "section": "持续与应答"
   },
   {
-    "time": 281.169688,
-    "lane": 1,
-    "kind": "tap",
-    "section": "持续与应答"
-  },
-  {
-    "time": 281.814859,
-    "lane": 1,
-    "kind": "tap",
-    "section": "持续与应答"
-  },
-  {
     "time": 283.427789,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "持续与应答"
   },
   {
     "time": 283.750375,
+    "lane": 1,
+    "kind": "tap",
+    "section": "持续与应答"
+  },
+  {
+    "time": 284.395546,
+    "lane": 0,
+    "kind": "tap",
+    "section": "持续与应答"
+  },
+  {
+    "time": 284.718132,
     "lane": 0,
     "kind": "tap",
     "section": "持续与应答"
@@ -1748,18 +1976,30 @@
     "section": "持续与应答"
   },
   {
-    "time": 288.266576,
-    "end_time": 288.911748,
-    "length_beats": 1.0,
+    "time": 286.653647,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
     "section": "持续与应答"
   },
   {
-    "time": 289.55692,
+    "time": 286.976233,
+    "lane": 0,
+    "kind": "tap",
+    "section": "持续与应答"
+  },
+  {
+    "time": 291.169849,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开",
+    "accent": true
+  },
+  {
+    "time": 291.169849,
     "lane": 1,
     "kind": "tap",
-    "section": "末段展开"
+    "section": "末段展开",
+    "accent": true
   },
   {
     "time": 291.492435,
@@ -1768,15 +2008,13 @@
     "section": "末段展开"
   },
   {
-    "time": 292.137607,
-    "end_time": 293.105364,
-    "length_beats": 1.5,
-    "lane": 1,
-    "kind": "hold",
+    "time": 291.815021,
+    "lane": 0,
+    "kind": "tap",
     "section": "末段展开"
   },
   {
-    "time": 292.460192,
+    "time": 292.137607,
     "lane": 0,
     "kind": "tap",
     "section": "末段展开"
@@ -1795,50 +2033,46 @@
   },
   {
     "time": 295.363465,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "末段展开"
   },
   {
-    "time": 296.331223,
+    "time": 295.686051,
+    "end_time": 296.976394,
+    "length_beats": 2.0,
     "lane": 0,
-    "kind": "tap",
-    "section": "末段展开",
-    "accent": true
-  },
-  {
-    "time": 296.331223,
-    "lane": 1,
-    "kind": "tap",
-    "section": "末段展开",
-    "accent": true
-  },
-  {
-    "time": 296.653808,
-    "end_time": 298.589324,
-    "length_beats": 3.0,
-    "lane": 1,
     "kind": "hold",
     "section": "末段展开"
   },
   {
-    "time": 296.976394,
-    "lane": 0,
+    "time": 295.686051,
+    "lane": 1,
     "kind": "tap",
     "section": "末段展开"
   },
   {
-    "time": 299.879667,
-    "lane": 0,
+    "time": 297.621566,
+    "lane": 1,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 297.944152,
+    "lane": 1,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 298.266738,
+    "lane": 1,
     "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 300.524839,
-    "end_time": 301.17001,
-    "length_beats": 1.0,
-    "lane": 1,
-    "kind": "hold",
+    "lane": 0,
+    "kind": "tap",
     "section": "末段展开"
   },
   {
@@ -1854,24 +2088,22 @@
     "section": "末段展开"
   },
   {
-    "time": 303.428111,
-    "lane": 0,
+    "time": 302.137768,
+    "lane": 1,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 302.460354,
+    "lane": 1,
     "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 304.073283,
-    "lane": 0,
-    "kind": "tap",
-    "section": "末段展开",
-    "accent": true
-  },
-  {
-    "time": 304.073283,
     "lane": 1,
     "kind": "tap",
-    "section": "末段展开",
-    "accent": true
+    "section": "末段展开"
   },
   {
     "time": 304.395869,
@@ -1880,22 +2112,44 @@
     "section": "末段展开"
   },
   {
-    "time": 305.041041,
+    "time": 305.686212,
     "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 306.008798,
-    "end_time": 306.65397,
-    "length_beats": 1.0,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 306.65397,
+    "lane": 1,
+    "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 306.976556,
     "lane": 1,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 307.299141,
+    "lane": 1,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 307.621727,
+    "lane": 1,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 308.266899,
+    "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
@@ -1906,74 +2160,108 @@
     "section": "末段展开"
   },
   {
-    "time": 309.234657,
+    "time": 310.525,
     "lane": 0,
     "kind": "tap",
     "section": "末段展开",
     "accent": true
   },
   {
-    "time": 309.234657,
+    "time": 310.525,
     "lane": 1,
     "kind": "tap",
     "section": "末段展开",
     "accent": true
   },
   {
-    "time": 309.879828,
-    "end_time": 312.460515,
-    "length_beats": 4.0,
+    "time": 310.847586,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 310.847586,
+    "end_time": 312.460515,
+    "length_beats": 2.5,
     "lane": 1,
+    "kind": "hold",
+    "section": "末段展开"
+  },
+  {
+    "time": 311.815343,
+    "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 312.137929,
-    "lane": 1,
-    "kind": "tap",
-    "section": "末段展开"
-  },
-  {
-    "time": 312.783101,
     "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
   {
-    "time": 314.718616,
+    "time": 312.460515,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 312.783101,
+    "lane": 1,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 313.105687,
+    "lane": 1,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 313.428273,
     "lane": 1,
     "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 315.363788,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 315.686373,
-    "end_time": 316.976717,
-    "length_beats": 2.0,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 316.008959,
+    "lane": 0,
+    "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 316.976717,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 317.299303,
-    "lane": 1,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 317.621889,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 317.944474,
+    "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
@@ -1981,19 +2269,11 @@
     "time": 319.557404,
     "lane": 0,
     "kind": "tap",
-    "section": "末段展开",
-    "accent": true
+    "section": "末段展开"
   },
   {
-    "time": 319.557404,
-    "lane": 1,
-    "kind": "tap",
-    "section": "末段展开",
-    "accent": true
-  },
-  {
-    "time": 320.525161,
-    "lane": 1,
+    "time": 319.87999,
+    "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
@@ -2004,11 +2284,15 @@
     "section": "末段展开"
   },
   {
-    "time": 322.13809,
-    "end_time": 322.783262,
-    "length_beats": 1.0,
+    "time": 321.815505,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 322.13809,
+    "lane": 0,
+    "kind": "tap",
     "section": "末段展开"
   },
   {
@@ -2018,67 +2302,89 @@
     "section": "末段展开"
   },
   {
+    "time": 322.783262,
+    "lane": 1,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
     "time": 323.105848,
-    "lane": 0,
-    "kind": "tap",
-    "section": "末段展开"
-  },
-  {
-    "time": 324.073606,
     "lane": 1,
-    "kind": "tap",
-    "section": "末段展开"
-  },
-  {
-    "time": 325.041363,
-    "lane": 1,
-    "kind": "tap",
-    "section": "末段展开"
-  },
-  {
-    "time": 325.686535,
-    "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 326.331706,
-    "end_time": 326.976878,
-    "length_beats": 1.0,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 326.654292,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 326.976878,
+    "lane": 0,
+    "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 327.299464,
-    "lane": 0,
-    "kind": "tap",
-    "section": "末段展开"
-  },
-  {
-    "time": 327.62205,
-    "lane": 0,
-    "kind": "tap",
-    "section": "末段展开"
-  },
-  {
-    "time": 328.267222,
-    "lane": 0,
-    "kind": "tap",
-    "section": "末段展开"
-  },
-  {
-    "time": 328.912393,
     "lane": 1,
     "kind": "tap",
     "section": "末段展开"
   },
   {
-    "time": 330.847908,
-    "end_time": 331.49308,
-    "length_beats": 1.0,
+    "time": 327.62205,
+    "lane": 1,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 327.944636,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "末段展开",
+    "accent": true
+  },
+  {
+    "time": 327.944636,
+    "lane": 1,
+    "kind": "tap",
+    "section": "末段展开",
+    "accent": true
+  },
+  {
+    "time": 328.267222,
+    "lane": 1,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 328.912393,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 329.234979,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 329.557565,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 331.49308,
+    "lane": 0,
+    "kind": "tap",
     "section": "末段展开"
   },
   {
@@ -2088,7 +2394,7 @@
     "section": "末段展开"
   },
   {
-    "time": 332.460838,
+    "time": 332.138252,
     "lane": 0,
     "kind": "tap",
     "section": "末段展开"
@@ -2100,13 +2406,19 @@
     "section": "末段展开"
   },
   {
-    "time": 334.396353,
-    "lane": 1,
+    "time": 335.041524,
+    "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 335.36411,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 335.686696,
     "lane": 0,
     "kind": "tap",
     "section": "末段展开"
@@ -2119,27 +2431,31 @@
   },
   {
     "time": 336.331868,
-    "end_time": 337.944797,
-    "length_beats": 2.5,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 336.654454,
+    "lane": 0,
+    "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 337.622211,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 337.944797,
-    "lane": 1,
+    "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 339.23514,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "末段展开"
   },
@@ -2150,17 +2466,33 @@
     "section": "末段展开"
   },
   {
-    "time": 340.202898,
+    "time": 340.84807,
     "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
   {
-    "time": 340.84807,
-    "end_time": 342.783585,
-    "length_beats": 3.0,
+    "time": 341.170656,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 342.783585,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 343.106171,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 343.428756,
+    "lane": 0,
+    "kind": "tap",
     "section": "末段展开"
   },
   {
@@ -2170,6 +2502,12 @@
     "section": "末段展开"
   },
   {
+    "time": 344.396514,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
     "time": 344.7191,
     "lane": 0,
     "kind": "tap",
@@ -2182,18 +2520,6 @@
     "kind": "tap",
     "section": "末段展开",
     "accent": true
-  },
-  {
-    "time": 345.364272,
-    "lane": 0,
-    "kind": "tap",
-    "section": "末段展开"
-  },
-  {
-    "time": 345.686857,
-    "lane": 1,
-    "kind": "tap",
-    "section": "末段展开"
   },
   {
     "time": 346.977201,
@@ -2203,15 +2529,25 @@
   },
   {
     "time": 347.299787,
-    "end_time": 348.267544,
-    "length_beats": 1.5,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 347.944958,
+    "lane": 0,
+    "kind": "tap",
     "section": "末段展开"
   },
   {
     "time": 348.267544,
-    "lane": 1,
+    "lane": 0,
+    "kind": "tap",
+    "section": "末段展开"
+  },
+  {
+    "time": 349.557888,
+    "lane": 0,
     "kind": "tap",
     "section": "末段展开"
   },
@@ -2222,35 +2558,29 @@
     "section": "末段展开"
   },
   {
-    "time": 350.525645,
-    "lane": 0,
-    "kind": "tap",
-    "section": "末段展开",
-    "accent": true
-  },
-  {
-    "time": 350.525645,
-    "lane": 1,
-    "kind": "tap",
-    "section": "末段展开",
-    "accent": true
-  },
-  {
-    "time": 350.848231,
-    "lane": 1,
-    "kind": "tap",
-    "section": "末段展开"
-  },
-  {
     "time": 352.138574,
     "lane": 0,
     "kind": "tap",
     "section": "渐弱"
   },
   {
-    "time": 353.106332,
-    "lane": 1,
+    "time": 352.46116,
+    "lane": 0,
     "kind": "tap",
+    "section": "渐弱"
+  },
+  {
+    "time": 353.106332,
+    "lane": 0,
+    "kind": "tap",
+    "section": "渐弱"
+  },
+  {
+    "time": 353.751504,
+    "end_time": 354.396675,
+    "length_beats": 1.0,
+    "lane": 0,
+    "kind": "hold",
     "section": "渐弱"
   },
   {
@@ -2262,129 +2592,59 @@
     "section": "渐弱"
   },
   {
-    "time": 354.396675,
+    "time": 356.654776,
+    "end_time": 357.299948,
+    "length_beats": 1.0,
     "lane": 0,
-    "kind": "tap",
-    "section": "渐弱"
-  },
-  {
-    "time": 357.299948,
-    "lane": 1,
-    "kind": "tap",
-    "section": "渐弱"
-  },
-  {
-    "time": 358.267705,
-    "lane": 0,
-    "kind": "tap",
-    "section": "渐弱"
-  },
-  {
-    "time": 359.880635,
-    "lane": 0,
-    "kind": "tap",
+    "kind": "hold",
     "section": "渐弱"
   },
   {
     "time": 360.848392,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "渐弱"
   },
   {
     "time": 361.170978,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
-    "section": "渐弱"
-  },
-  {
-    "time": 362.461321,
-    "end_time": 364.074251,
-    "length_beats": 2.5,
-    "lane": 0,
-    "kind": "hold",
     "section": "渐弱"
   },
   {
     "time": 365.042008,
-    "lane": 0,
-    "kind": "tap",
-    "section": "渐弱"
-  },
-  {
-    "time": 366.332352,
     "lane": 1,
     "kind": "tap",
     "section": "渐弱"
   },
   {
-    "time": 367.622695,
-    "end_time": 368.590453,
-    "length_beats": 1.5,
+    "time": 366.977523,
+    "end_time": 367.622695,
+    "length_beats": 1.0,
     "lane": 0,
     "kind": "hold",
     "section": "渐弱"
   },
   {
-    "time": 370.203382,
+    "time": 369.55821,
+    "end_time": 370.203382,
+    "length_beats": 1.0,
     "lane": 0,
-    "kind": "tap",
-    "section": "渐弱"
-  },
-  {
-    "time": 371.171139,
-    "lane": 0,
-    "kind": "tap",
-    "section": "渐弱"
-  },
-  {
-    "time": 371.493725,
-    "lane": 0,
-    "kind": "tap",
+    "kind": "hold",
     "section": "渐弱"
   },
   {
     "time": 372.784069,
-    "lane": 0,
+    "lane": 1,
     "kind": "tap",
     "section": "尾奏留白"
   },
   {
-    "time": 374.074412,
-    "lane": 0,
-    "kind": "tap",
-    "section": "尾奏留白"
-  },
-  {
-    "time": 374.719584,
-    "end_time": 375.364755,
+    "time": 373.751826,
+    "end_time": 374.396998,
     "length_beats": 1.0,
     "lane": 1,
     "kind": "hold",
-    "section": "尾奏留白"
-  },
-  {
-    "time": 375.364755,
-    "lane": 0,
-    "kind": "tap",
-    "section": "尾奏留白"
-  },
-  {
-    "time": 377.945442,
-    "lane": 0,
-    "kind": "tap",
-    "section": "尾奏留白"
-  },
-  {
-    "time": 379.235786,
-    "lane": 0,
-    "kind": "tap",
-    "section": "尾奏留白"
-  },
-  {
-    "time": 381.493887,
-    "lane": 0,
-    "kind": "tap",
     "section": "尾奏留白"
   },
   {
@@ -2394,11 +2654,15 @@
     "section": "尾奏留白"
   },
   {
-    "time": 383.106816,
-    "end_time": 384.719745,
-    "length_beats": 2.5,
+    "time": 384.074573,
     "lane": 0,
-    "kind": "hold",
+    "kind": "tap",
+    "section": "尾奏留白"
+  },
+  {
+    "time": 384.397159,
+    "lane": 0,
+    "kind": "tap",
     "section": "尾奏留白"
   }
 ]

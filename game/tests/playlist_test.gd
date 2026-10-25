@@ -91,6 +91,8 @@ func _run() -> void:
 			assert(scene.mode == "result")
 			# Retry loads this same song, not the first track's chart.
 			_touch(scene, Vector2(640, 550))
+			assert(scene.mode == "intro" and not scene.music.playing)
+			scene._advance_intro(3.0)
 			assert(scene.song_index == index and scene.score == 0 and scene.music.playing)
 			scene._pause()
 			_touch(scene, Vector2(640, 450))

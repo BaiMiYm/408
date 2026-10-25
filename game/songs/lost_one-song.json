@@ -10,14 +10,14 @@
   "grid_offset_seconds": 0.372565,
   "difficulty": "挑战",
   "difficulty_label": "挑战",
-  "note_count": 991,
+  "note_count": 1019,
   "note_types": {
-    "tap": 966,
-    "hold": 22,
+    "tap": 992,
+    "hold": 24,
     "roll": 3
   },
-  "required_presses": 1003,
-  "double_accents": 23,
+  "required_presses": 1031,
+  "double_accents": 27,
   "peak_objects_per_second": 10,
   "sections": [
     {
@@ -120,6 +120,9 @@
     }
   ],
   "audio_sha256": "4a417547676262a398d140e58e5f13561fa21c00da0ce8b1bdcde16b97e737e7",
-  "chart_status": "全量重编：录音起音候选、按声部组织短组、分段疏密与持续和声长按；待逐拍实听与手机手感验收",
-  "chart_revision": "0.8.0"
+  "chart_status": "参考三段本地视频的短组、持续交接与留白方式修订；选点由本曲音频候选支持，待真人同步试听验收",
+  "chart_revision": "0.9.0",
+  "overlapping_hold_pairs": 0,
+  "hold_tap_interactions": 22,
+  "repeated_source_phrases": 20
 }

@@ -3,6 +3,8 @@ extends Node2D
 const Judge = preload("res://judge.gd")
 const KeyBindings = preload("res://key_bindings.gd")
 const RhythmSession = preload("res://rhythm_session.gd")
+const CreatorPanel = preload("res://creator_panel.gd")
+const WhitecatRunner = preload("res://whitecat_runner.gd")
 const CYAN := Color("5de7ee")
 const PINK := Color("ff71ad")
 const INK := Color("10152a")
@@ -10,6 +12,7 @@ const WHITE := Color("edf5ff")
 const TRAVEL := 1.65
 const HIT_X := 310.0
 const LANES := [444.0, 300.0]
+const INTRO_SECONDS := 3.0
 
 var font: Font
 var song: Dictionary
@@ -47,10 +50,14 @@ var binding_return_mode := "menu"
 var binding_lane := -1
 var binding_slot := -1
 var binding_message := "点击按键框，然后按下新的按键"
+var creator_panel
+var intro_left := 0.0
+var runner = WhitecatRunner.new()
 
 func _ready() -> void:
-	var ui_font := SystemFont.new()
-	ui_font.font_names = PackedStringArray(["Microsoft YaHei", "Noto Sans CJK SC", "Droid Sans Fallback", "sans-serif"])
+	var ui_font := FontVariation.new()
+	ui_font.base_font = preload("res://assets/fonts/NotoSansSC.ttf")
+	ui_font.variation_opentype = {"wght": 500.0}
 	font = ui_font
 	playlist = JSON.parse_string(FileAccess.get_file_as_string("res://playlist.json"))
 	_select_chart(chart_index)
@@ -64,13 +71,53 @@ func _ready() -> void:
 	if config.load("user://settings.cfg") == OK:
 		offset_ms = clampi(int(config.get_value("audio", "offset_ms", 0)), -250, 250)
 		bindings.load_from(config)
+	creator_panel = CreatorPanel.new()
+	add_child(creator_panel)
+	creator_panel.closed.connect(func():
+		Input.emulate_mouse_from_touch = false
+		mode = "menu"
+		_refresh_playlist())
+	creator_panel.bindings_requested.connect(func():
+		Input.emulate_mouse_from_touch = false
+		mode = "menu"
+		_refresh_playlist()
+		_open_bindings())
+	creator_panel.try_project.connect(_try_custom_project)
+	_refresh_playlist()
 	queue_redraw()
+
+func _refresh_playlist() -> void:
+	var previous_id: String = playlist[song_index].id if not playlist.is_empty() else ""
+	playlist = JSON.parse_string(FileAccess.get_file_as_string("res://playlist.json"))
+	playlist.append_array(creator_panel.store.playlist_entries())
+	song_index = maxi(0, playlist.find_custom(func(entry): return entry.id == previous_id))
+	_select_chart(int(chart_choices.get(song_index, 0)))
+
+func _open_settings() -> void:
+	music.stop()
+	Input.emulate_mouse_from_touch = true
+	mode = "creator"
+	creator_panel.open_settings()
+
+func _try_custom_project(id: String) -> void:
+	Input.emulate_mouse_from_touch = false
+	mode = "menu"
+	_refresh_playlist()
+	var index := playlist.find_custom(func(entry): return entry.id == "custom_" + id)
+	if index >= 0:
+		_select_song(index)
+		_request_start()
 
 func _select_chart(index: int) -> void:
 	var charts: Array = playlist[song_index]["charts"]
 	chart_index = posmod(index, charts.size())
 	chart_choices[song_index] = chart_index
-	song = JSON.parse_string(FileAccess.get_file_as_string(charts[chart_index]["info"]))
+	if charts[chart_index].has("project"):
+		song = charts[chart_index].project.duplicate(true)
+		song["note_count"] = song.notes.size()
+		song["sections"] = []
+	else:
+		song = JSON.parse_string(FileAccess.get_file_as_string(charts[chart_index]["info"]))
 	beat_seconds = 60.0 / float(song["bpm"])
 	if is_instance_valid(music):
 		_load_selected_audio()
@@ -94,17 +141,58 @@ func _load_selected_audio() -> void:
 	music.stop()
 	music.stream_paused = false
 	music.stream = load(song["audio"]) if ResourceLoader.exists(song["audio"]) else null
+	# 本地复制的 MP3 尚未生成 Godot 导入缓存时，直接读取原文件。
+	if music.stream == null and FileAccess.file_exists(song["audio"]) and str(song["audio"]).get_extension().to_lower() == "mp3":
+		var audio := AudioStreamMP3.new()
+		audio.data = FileAccess.get_file_as_bytes(song["audio"])
+		if audio.get_length() > 0.0:
+			music.stream = audio
 	if music.stream is AudioStreamMP3:
+		music.stream.loop = false
+	if music.stream == null and str(song["audio"]).get_extension().to_lower() == "ogg" and FileAccess.file_exists(song["audio"]):
+		music.stream = AudioStreamOggVorbis.load_from_file(song["audio"])
+	if music.stream is AudioStreamOggVorbis:
 		music.stream.loop = false
 
 func _difficulty_label() -> String:
 	return str(playlist[song_index]["charts"][chart_index]["label"])
 
+func _request_start() -> void:
+	if mode not in ["menu", "result"] or music.stream == null:
+		return
+	music.stop()
+	music.stream_paused = false
+	session.reset([])
+	song_time = 0.0
+	sparks.clear()
+	flashes = [0.0, 0.0]
+	intro_left = INTRO_SECONDS
+	runner.reset()
+	mode = "intro"
+	queue_redraw()
+
+func _advance_intro(delta: float) -> void:
+	if mode != "intro":
+		return
+	intro_left = maxf(0, intro_left - delta)
+	if intro_left <= 0:
+		_start()
+
+func _cancel_intro() -> void:
+	intro_left = 0
+	music.stop()
+	mode = "menu"
+	queue_redraw()
+
 func _start() -> void:
 	if music.stream == null:
 		return
-	var path: String = playlist[song_index]["charts"][chart_index]["chart"]
-	session.reset(JSON.parse_string(FileAccess.get_file_as_string(path)))
+	runner.reset()
+	if song.has("notes"):
+		session.reset(song.notes)
+	else:
+		var path: String = playlist[song_index]["charts"][chart_index]["chart"]
+		session.reset(JSON.parse_string(FileAccess.get_file_as_string(path)))
 	feedback = "READY"
 	feedback_left = 1.0
 	sparks.clear()
@@ -120,6 +208,7 @@ func _clock() -> float:
 
 func _process(delta: float) -> void:
 	visual_time += delta
+	_advance_intro(delta)
 	if frame_count == 0:
 		for arg in OS.get_cmdline_user_args():
 			if arg.begins_with("--capture-song="):
@@ -153,6 +242,11 @@ func _process(delta: float) -> void:
 		song_time = maxf(song_time, _clock())
 		var judged_time := song_time - offset_ms / 1000.0
 		session.update(judged_time)
+		var sustained := ["", ""]
+		for n in notes:
+			if n["active"] and not n["done"] and n["kind"] in ["hold", "roll"]:
+				sustained[int(n["lane"])] = n["kind"]
+		runner.step(delta, sustained, [session.lane_held(0), session.lane_held(1)])
 		feedback_left = maxf(0.0, feedback_left - delta)
 		for i in range(2):
 			flashes[i] = maxf(0.0, flashes[i] - delta * 4.0)
@@ -187,7 +281,9 @@ func _finish() -> void:
 	mode = "result"
 
 func _pause() -> void:
-	if mode == "play":
+	if mode == "intro":
+		_cancel_intro()
+	elif mode == "play":
 		mode = "pause"
 		music.stream_paused = true
 		session.suspend()
@@ -198,23 +294,32 @@ func _pause() -> void:
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_APPLICATION_PAUSED or what == NOTIFICATION_APPLICATION_FOCUS_OUT:
-		if mode == "play":
+		if mode == "intro":
+			_cancel_intro()
+		elif mode == "play":
 			_pause()
 		elif mode == "bindings" and binding_lane >= 0:
 			binding_lane = -1
 			binding_slot = -1
 			binding_message = "已取消改键，请重新选择按键框"
 	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
-		if mode == "bindings":
+		if mode == "creator":
+			creator_panel.go_back()
+		elif mode == "bindings":
 			_close_bindings()
-		elif mode == "play" or mode == "pause":
+		elif mode in ["intro", "play", "pause"]:
 			_pause()
 		else:
 			get_tree().quit()
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
-		get_tree().quit()
+		if mode == "creator" and is_instance_valid(creator_panel) and creator_panel.dirty:
+			creator_panel._leave(func(): get_tree().quit())
+		else:
+			get_tree().quit()
 
 func _input(event: InputEvent) -> void:
+	if mode == "creator":
+		return
 	# Releases are handled in every mode so focus changes cannot leave a stuck hold.
 	if event is InputEventKey and not event.pressed:
 		session.release("key_%d" % event.keycode, _judgment_time())
@@ -264,7 +369,7 @@ func _input(event: InputEvent) -> void:
 			if mode == "pause":
 				_pause()
 			else:
-				_start()
+				_request_start()
 
 func _pointer_down(pos: Vector2, source: String) -> void:
 	if mode == "play" and not Rect2(1130, 32, 100, 62).has_point(pos):
@@ -273,6 +378,10 @@ func _pointer_down(pos: Vector2, source: String) -> void:
 		_pointer(pos)
 
 func _pointer(pos: Vector2) -> void:
+	if mode == "intro":
+		if Rect2(490, 630, 300, 55).has_point(pos):
+			_cancel_intro()
+		return
 	if mode == "bindings":
 		for lane in range(2):
 			for slot in range(2):
@@ -301,7 +410,7 @@ func _pointer(pos: Vector2) -> void:
 		elif Rect2(810, 105, 65, 50).has_point(pos):
 			_select_song(song_index + 1)
 		elif Rect2(485, 380, 310, 76).has_point(pos):
-			_start()
+			_request_start()
 		elif Rect2(475, 498, 70, 56).has_point(pos):
 			_set_offset(-10)
 		elif Rect2(735, 498, 70, 56).has_point(pos):
@@ -313,6 +422,10 @@ func _pointer(pos: Vector2) -> void:
 			_open_bindings()
 		elif Rect2(52, 248, 220, 60).has_point(pos):
 			_select_chart(chart_index + 1)
+		elif Rect2(52, 370, 220, 60).has_point(pos):
+			_open_settings()
+		elif Rect2(52, 450, 220, 55).has_point(pos):
+			get_tree().change_scene_to_file("res://character_lab.tscn")
 	elif mode == "pause":
 		if Rect2(485, 325, 310, 76).has_point(pos):
 			_pause()
@@ -323,7 +436,7 @@ func _pointer(pos: Vector2) -> void:
 			_open_bindings()
 	elif mode == "result":
 		if Rect2(485, 510, 310, 76).has_point(pos):
-			_start()
+			_request_start()
 		elif Rect2(485, 600, 310, 55).has_point(pos):
 			mode = "menu"
 
@@ -361,6 +474,18 @@ func _judgment_time() -> float:
 	return maxf(song_time, _clock()) - offset_ms / 1000.0
 
 func _press(source: String, lane: int) -> void:
+	if session.sources.has(source):
+		return
+	var kind := "tap"
+	for note in notes:
+		if int(note["lane"]) == lane and note["active"] and not note["done"]:
+			kind = note.get("kind", "tap")
+			break
+	if kind == "tap":
+		var index: int = Judge.nearest(notes, lane, _judgment_time())
+		if index >= 0:
+			kind = notes[index].get("kind", "tap")
+	runner.trigger(lane, kind)
 	flashes[lane] = 1.0
 	session.press(source, lane, _judgment_time())
 
@@ -372,8 +497,10 @@ func _on_judged(note: Dictionary, grade: String) -> void:
 	feedback = grade
 	feedback_left = 0.5
 	if grade == "MISS":
+		runner.miss()
 		return
 	var lane := int(note["lane"])
+	runner.hit(lane)
 	for i in range(10):
 		var angle := float(i) * TAU / 10.0
 		sparks.append({"pos": Vector2(HIT_X, LANES[lane]), "vel": Vector2(cos(angle), sin(angle)) * 180.0, "life": 0.35, "lane": lane})
@@ -418,12 +545,14 @@ func _draw() -> void:
 	_text("NEON PAWS", Vector2(52, 72), 26, CYAN)
 	if mode != "menu" and mode != "bindings":
 		_text(song["title"], Vector2(290, 72), _fit_size(song["title"], 26, 540), CYAN)
-	if mode == "menu":
+	if mode == "menu" or mode == "creator":
 		_draw_menu()
 	elif mode == "bindings":
 		_draw_bindings()
 	elif mode == "result":
 		_draw_result()
+	elif mode == "intro":
+		_draw_intro()
 	else:
 		_draw_game()
 		if mode == "pause":
@@ -433,9 +562,24 @@ func _draw() -> void:
 			_button(Rect2(485, 425, 310, 65), "返回菜单", PINK)
 			_button(Rect2(485, 510, 310, 65), "按键设置")
 
+func _draw_intro() -> void:
+	draw_rect(Rect2(0, 95, 1280, 625), Color(0.025, 0.045, 0.09, 0.90))
+	_center(song["title"], 185, _fit_size(song["title"], 40, 1000), CYAN)
+	_center("即将演奏 · " + _difficulty_label(), 231, 22, Color("9daec7"))
+	var progress := 1.0 - intro_left / INTRO_SECONDS
+	draw_circle(Vector2(640, 350), 85, Color(CYAN, 0.06))
+	draw_arc(Vector2(640, 350), 85, -PI / 2, -PI / 2 + TAU * progress, 80, CYAN, 5, true)
+	_center("开始" if intro_left < 0.25 else str(int(ceil(intro_left))), 385, 74, WHITE)
+	_center("双手就位，倒计时结束后音乐开始", 475, 23, Color("9daec7"))
+	_button(Rect2(100, 515, 500, 75), "地面 · " + bindings.lane_label(0), CYAN)
+	_button(Rect2(680, 515, 500, 75), "空中 · " + bindings.lane_label(1), PINK)
+	_button(Rect2(490, 630, 300, 55), "返回菜单 / Esc")
+
 func _draw_menu() -> void:
 	_button(Rect2(1000, 42, 220, 54), "声音：关" if muted else "声音：开")
 	_button(Rect2(52, 168, 180, 54), "按键设置")
+	_button(Rect2(52, 370, 220, 60), "设置 / 创作")
+	_button(Rect2(52, 450, 220, 55), "角色动作测试")
 	_button(Rect2(52, 248, 220, 60), "难度：" + _difficulty_label(), PINK if _difficulty_label() == "挑战" else CYAN)
 	_text("点击切换难度" if playlist[song_index]["charts"].size() > 1 else "本曲一套谱面", Vector2(77, 335), 16, Color("9daec7"))
 	_button(Rect2(405, 105, 65, 50), "‹")
@@ -493,19 +637,12 @@ func _draw_game() -> void:
 		draw_line(Vector2(160, y), Vector2(1230, y), Color(col, 0.2), 2)
 		draw_circle(Vector2(HIT_X, y), 38.0 + flashes[lane] * 10.0, Color(col, 0.1 + flashes[lane] * 0.2))
 		draw_arc(Vector2(HIT_X, y), 28, 0, TAU, 48, col, 3, true)
-		_text("地面" if lane == 0 else "空中", Vector2(190, y + 7), 16, col)
+		_text("地面" if lane == 0 else "空中", Vector2(52, y + 7), 16, col)
 	for note in notes:
 		_draw_note(note)
 	for spark in sparks:
 		draw_circle(spark["pos"], 4.0, Color(CYAN if spark["lane"] == 0 else PINK, spark["life"] / 0.35))
-	# A tiny original runner silhouette, assembled from vector shapes.
-	var bob := sin(song_time * TAU / beat_seconds) * 4.0
-	draw_circle(Vector2(105, 439 + bob), 23, WHITE)
-	draw_colored_polygon(PackedVector2Array([Vector2(84, 425 + bob), Vector2(86, 403 + bob), Vector2(100, 420 + bob)]), WHITE)
-	draw_colored_polygon(PackedVector2Array([Vector2(110, 420 + bob), Vector2(126, 403 + bob), Vector2(127, 429 + bob)]), WHITE)
-	draw_circle(Vector2(114, 436 + bob), 4, INK)
-	draw_line(Vector2(96, 460 + bob), Vector2(80, 490), CYAN, 9, true)
-	draw_line(Vector2(102, 469), Vector2(126, 490 + bob), WHITE, 7, true)
+	runner.draw_on(self)
 	if combo > 0:
 		_center(str(combo), 205, 48)
 		_center("连击", 231, 15, Color("9daec7"))
