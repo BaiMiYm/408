@@ -4,15 +4,18 @@ const Judge = preload("res://judge.gd")
 const KeyBindings = preload("res://key_bindings.gd")
 const RhythmSession = preload("res://rhythm_session.gd")
 const CreatorPanel = preload("res://creator_panel.gd")
-const WhitecatRunner = preload("res://whitecat_runner.gd")
+const ParkRunner = preload("res://park_runner.gd")
+const ParkUI = preload("res://park_game_ui.gd")
 const CYAN := Color("5de7ee")
 const PINK := Color("ff71ad")
 const INK := Color("10152a")
 const WHITE := Color("edf5ff")
 const TRAVEL := 1.65
 const HIT_X := 310.0
-const LANES := [444.0, 300.0]
+const LANES := [456.0, 334.0]
 const INTRO_SECONDS := 3.0
+const MAX_HEALTH := 100
+const MISS_DAMAGE := 10
 
 var font: Font
 var song: Dictionary
@@ -52,7 +55,11 @@ var binding_slot := -1
 var binding_message := "点击按键框，然后按下新的按键"
 var creator_panel
 var intro_left := 0.0
-var runner = WhitecatRunner.new()
+var runner = ParkRunner.new()
+var park_ui = ParkUI.new()
+var health := MAX_HEALTH
+var shown_health := float(MAX_HEALTH)
+var result_failed := false
 
 func _ready() -> void:
 	var ui_font := FontVariation.new()
@@ -167,6 +174,9 @@ func _request_start() -> void:
 	sparks.clear()
 	flashes = [0.0, 0.0]
 	intro_left = INTRO_SECONDS
+	health = MAX_HEALTH
+	shown_health = MAX_HEALTH
+	result_failed = false
 	runner.reset()
 	mode = "intro"
 	queue_redraw()
@@ -188,6 +198,9 @@ func _start() -> void:
 	if music.stream == null:
 		return
 	runner.reset()
+	health = MAX_HEALTH
+	shown_health = MAX_HEALTH
+	result_failed = false
 	if song.has("notes"):
 		session.reset(song.notes)
 	else:
@@ -216,6 +229,9 @@ func _process(delta: float) -> void:
 	if frame_count == 0 and "--capture-game" in OS.get_cmdline_user_args():
 		_start()
 		music.seek(45.0)
+		for note in notes:
+			if float(note.get("end_time", note["time"])) < 45.0:
+				note["done"] = true
 	if frame_count == 0 and "--capture-keys" in OS.get_cmdline_user_args():
 		_open_bindings()
 	if frame_count == 0 and ("--capture-hold" in OS.get_cmdline_user_args() or "--capture-roll" in OS.get_cmdline_user_args()):
@@ -242,6 +258,11 @@ func _process(delta: float) -> void:
 		song_time = maxf(song_time, _clock())
 		var judged_time := song_time - offset_ms / 1000.0
 		session.update(judged_time)
+		if mode != "play":
+			queue_redraw()
+			frame_count += 1
+			return
+		shown_health = move_toward(shown_health, float(health), delta * 45)
 		var sustained := ["", ""]
 		for n in notes:
 			if n["active"] and not n["done"] and n["kind"] in ["hold", "roll"]:
@@ -278,7 +299,18 @@ func _finish() -> void:
 	if mode != "play":
 		return
 	session.finish(float(song["duration"]))
+	if mode == "play":
+		song_time = float(song["duration"])
+		music.stop()
+		mode = "result"
+
+func _fail() -> void:
+	if mode != "play": return
+	result_failed = true
+	music.stop()
+	session.suspend()
 	mode = "result"
+	queue_redraw()
 
 func _pause() -> void:
 	if mode == "intro":
@@ -372,7 +404,7 @@ func _input(event: InputEvent) -> void:
 				_request_start()
 
 func _pointer_down(pos: Vector2, source: String) -> void:
-	if mode == "play" and not Rect2(1130, 32, 100, 62).has_point(pos):
+	if mode == "play" and not ParkUI.PAUSE_RECT.has_point(pos):
 		_press(source, 0 if pos.x < 640.0 else 1)
 	else:
 		_pointer(pos)
@@ -399,7 +431,7 @@ func _pointer(pos: Vector2) -> void:
 			_close_bindings()
 		return
 	if mode == "play":
-		if Rect2(1130, 32, 100, 62).has_point(pos):
+		if ParkUI.PAUSE_RECT.has_point(pos):
 			_pause()
 		else:
 			_press("mouse", 0 if pos.x < 640.0 else 1)
@@ -498,6 +530,10 @@ func _on_judged(note: Dictionary, grade: String) -> void:
 	feedback_left = 0.5
 	if grade == "MISS":
 		runner.miss()
+		if mode == "play":
+			health = maxi(0, health - MISS_DAMAGE)
+			if health == 0:
+				_fail()
 		return
 	var lane := int(note["lane"])
 	runner.hit(lane)
@@ -532,6 +568,16 @@ func _style(bg: Color, border: Color, radius: int) -> StyleBoxFlat:
 	return box
 
 func _draw() -> void:
+	if mode in ["play", "pause"]:
+		park_ui.background(self, visual_time)
+		_draw_game()
+		if mode == "pause":
+			draw_rect(Rect2(0, 0, 1280, 720), Color(0.02, 0.03, 0.08, 0.92))
+			_center("已暂停", 250, 52)
+			_button(Rect2(485, 325, 310, 76), "继续游戏")
+			_button(Rect2(485, 425, 310, 65), "返回菜单", PINK)
+			_button(Rect2(485, 510, 310, 65), "按键设置")
+		return
 	draw_rect(Rect2(0, 0, 1280, 720), Color("080f20"))
 	for i in range(32):
 		var x := fposmod(float(i * 163) - visual_time * 12.0, 1280.0)
@@ -553,14 +599,6 @@ func _draw() -> void:
 		_draw_result()
 	elif mode == "intro":
 		_draw_intro()
-	else:
-		_draw_game()
-		if mode == "pause":
-			draw_rect(Rect2(0, 0, 1280, 720), Color(0.02, 0.03, 0.08, 0.92))
-			_center("已暂停", 250, 52)
-			_button(Rect2(485, 325, 310, 76), "继续游戏")
-			_button(Rect2(485, 425, 310, 65), "返回菜单", PINK)
-			_button(Rect2(485, 510, 310, 65), "按键设置")
 
 func _draw_intro() -> void:
 	draw_rect(Rect2(0, 95, 1280, 625), Color(0.025, 0.045, 0.09, 0.90))
@@ -621,44 +659,27 @@ func _time_label(seconds: float) -> String:
 	return "%d:%02d" % [total / 60, total % 60]
 
 func _draw_game() -> void:
-	_text("%07d" % score, Vector2(870, 75), 32)
-	_button(Rect2(1130, 32, 100, 62), "II")
-	var progress := clampf(song_time / music.stream.get_length(), 0, 1)
-	draw_rect(Rect2(52, 105, 1176, 4), Color("20314a"))
-	draw_rect(Rect2(52, 105, 1176 * progress, 4), CYAN)
-	_text("%.0f BPM / %s" % [song["bpm"], _difficulty_label()], Vector2(52, 142), 18, Color("9daec7"))
-	for section in song["sections"]:
-		if song_time >= float(section["start"]) and song_time < float(section["end"]):
-			_center(section["type"], 142, 18, Color("9daec7"))
-	_text("%s / %s" % [_time_label(song_time), _time_label(music.stream.get_length())], Vector2(1070, 142), 18, Color("9daec7"))
+	var progress := park_ui.progress(song_time, float(song["duration"]))
 	for lane in range(2):
 		var col: Color = CYAN if lane == 0 else PINK
 		var y: float = LANES[lane]
-		draw_line(Vector2(160, y), Vector2(1230, y), Color(col, 0.2), 2)
-		draw_circle(Vector2(HIT_X, y), 38.0 + flashes[lane] * 10.0, Color(col, 0.1 + flashes[lane] * 0.2))
-		draw_arc(Vector2(HIT_X, y), 28, 0, TAU, 48, col, 3, true)
-		_text("地面" if lane == 0 else "空中", Vector2(52, y + 7), 16, col)
+		if flashes[lane] > 0:
+			draw_arc(Vector2(HIT_X, y), 44 + flashes[lane] * 8, 0, TAU, 48, Color(col, flashes[lane]), 4, true)
 	for note in notes:
 		_draw_note(note)
 	for spark in sparks:
 		draw_circle(spark["pos"], 4.0, Color(CYAN if spark["lane"] == 0 else PINK, spark["life"] / 0.35))
 	runner.draw_on(self)
-	if combo > 0:
-		_center(str(combo), 205, 48)
-		_center("连击", 231, 15, Color("9daec7"))
+	park_ui.hud(self, font, health, MAX_HEALTH, shown_health, progress, combo, score, song["title"], _difficulty_label(), "%s / %s" % [_time_label(song_time), _time_label(float(song["duration"]))], bindings.lane_label(0), bindings.lane_label(1))
 	if feedback_left > 0:
 		var labels := {"PERFECT": "完美", "GOOD": "良好", "OK": "命中", "MISS": "漏击", "READY": "准备", "HOLD": "按住长条"}
-		_center(labels.get(feedback, feedback), 380, 30, PINK if feedback == "MISS" else CYAN)
+		var label: String = labels.get(feedback, feedback)
+		var width := font.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, 34).x
+		var point := Vector2(640 - width / 2, 290)
+		draw_string_outline(font, point, label, HORIZONTAL_ALIGNMENT_LEFT, -1, 34, 7, Color.WHITE)
+		_text(label, point, 34, PINK if feedback == "MISS" else CYAN)
 	if song_time < 1.5:
-		_center("准备演奏", 205, 40, CYAN)
-	for lane in range(2):
-		var col: Color = CYAN if lane == 0 else PINK
-		var rect := Rect2(40 + lane * 620, 567, 580, 113)
-		var glow: float = maxf(flashes[lane], 0.6 if session.lane_held(lane) else 0.0)
-		draw_style_box(_style(Color(col, 0.07 + glow * 0.2), Color(col, 0.6), 20), rect)
-		var label := ("地面 / " if lane == 0 else "空中 / ") + bindings.lane_label(lane)
-		var label_width := font.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, 24).x
-		_text(label, Vector2(rect.get_center().x - label_width / 2.0, 633), 24, col)
+		_center("准备演奏", 230, 36, ParkUI.INK)
 
 func _draw_note(note: Dictionary) -> void:
 	if note["done"]:
@@ -675,6 +696,7 @@ func _draw_note(note: Dictionary) -> void:
 	var kind: String = note.get("kind", "tap")
 	if kind == "tap":
 		var points := PackedVector2Array([Vector2(x, y - 23), Vector2(x + 23, y), Vector2(x, y + 23), Vector2(x - 23, y)])
+		draw_colored_polygon(PackedVector2Array([Vector2(x, y - 27), Vector2(x + 27, y), Vector2(x, y + 27), Vector2(x - 27, y)]), Color.WHITE)
 		draw_colored_polygon(points, col)
 		draw_circle(Vector2(x, y), 6, INK)
 		return
@@ -703,12 +725,15 @@ func _draw_note(note: Dictionary) -> void:
 		_text("%d / %d" % [note["hits"], note["required_hits"]], Vector2(x - 25, y - 44), 20, col)
 
 func _draw_result() -> void:
-	_center("演奏完成 · " + _difficulty_label(), 170, 48)
+	_center(("演奏失败 · " if result_failed else "演奏完成 · ") + _difficulty_label(), 170, 48)
 	_center("%07d" % score, 235, 52, CYAN)
 	var earned: float = counts["PERFECT"] + counts["GOOD"] * 0.7 + counts["OK"] * 0.3
-	var accuracy := 100.0 * earned / maxf(1.0, notes.size())
+	var judged := int(counts["PERFECT"]) + int(counts["GOOD"]) + int(counts["OK"]) + int(counts["MISS"])
+	var accuracy := 100.0 * earned / maxf(1.0, judged)
 	_center("准确率 %.1f%%    /    最高连击 %d" % [accuracy, best_combo], 290, 24)
 	_center("完美 %d     良好 %d     命中 %d" % [counts["PERFECT"], counts["GOOD"], counts["OK"]], 370, 23, CYAN)
 	_center("漏击 %d" % counts["MISS"], 418, 23, PINK)
+	if result_failed:
+		_center("血量耗尽 · 已判定 %d / %d 个音符" % [judged, notes.size()], 465, 20, PINK)
 	_button(Rect2(485, 510, 310, 76), "再来一次")
 	_button(Rect2(485, 600, 310, 55), "返回菜单", PINK)

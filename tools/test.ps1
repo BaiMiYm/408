@@ -8,7 +8,7 @@ $savedAppData = $env:APPDATA
 try {
     $env:APPDATA = $runtimeRoot
     $testNames = if ($CoreOnly) { @('judge_test', 'sustain_test') } else {
-        @('judge_test','flow_test','key_bindings_test','sustain_test','sustain_input_test','empty_input_test','challenge_test','playlist_test','local_audio_test','creator_test','creator_editing_test','intro_test','whitecat_test')
+        @('judge_test','flow_test','key_bindings_test','sustain_test','sustain_input_test','empty_input_test','challenge_test','playlist_test','local_audio_test','creator_test','creator_editing_test','intro_test','whitecat_test','park_ui_test')
     }
     foreach ($name in $testNames) {
         $logPath = Join-Path $runtimeRoot "$name.log"

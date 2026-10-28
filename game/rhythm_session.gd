@@ -37,6 +37,8 @@ func press(source: String, lane: int, time: float) -> void:
 	if suspended or sources.has(source):
 		return
 	update(time)
+	if suspended:
+		return
 	sources[source] = lane
 	for note in notes:
 		if note["done"] or not note["active"] or int(note["lane"]) != lane:
@@ -89,6 +91,8 @@ func update(time: float) -> void:
 	if suspended:
 		return
 	for note in notes:
+		if suspended:
+			return
 		if note["done"]:
 			continue
 		var kind: String = note.get("kind", "tap")
@@ -119,6 +123,8 @@ func resume(time: float) -> void:
 func finish(time: float) -> void:
 	update(time)
 	for note in notes:
+		if suspended:
+			return
 		if not note["done"]:
 			_resolve(note, "MISS")
 	sources.clear()

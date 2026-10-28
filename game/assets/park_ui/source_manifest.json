@@ -1,0 +1,186 @@
+{
+  "source_file": "未命名作品.psd",
+  "source_sha256": "e391150e8e0a58e24e005374d046d1981d23c156f14f3631e2ac6b0ea9a51d8e",
+  "canvas": [
+    2636,
+    1870
+  ],
+  "assets": [
+    {
+      "file": "background.png",
+      "layers": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_bbox": [
+        0,
+        0,
+        2636,
+        1870
+      ]
+    },
+    {
+      "file": "scenery.png",
+      "layers": [
+        1,
+        8
+      ],
+      "source_bbox": [
+        0,
+        0,
+        2636,
+        1870
+      ]
+    },
+    {
+      "file": "ground.png",
+      "layers": [
+        9,
+        10,
+        11
+      ],
+      "source_bbox": [
+        0,
+        1371,
+        2636,
+        1708
+      ]
+    },
+    {
+      "file": "water.png",
+      "layers": [
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      "source_bbox": [
+        0,
+        1654,
+        2636,
+        1870
+      ]
+    },
+    {
+      "file": "character.png",
+      "layers": [
+        34,
+        35,
+        36
+      ],
+      "source_bbox": [
+        97,
+        937,
+        527,
+        1509
+      ]
+    },
+    {
+      "file": "progress_stripes.png",
+      "layers": [
+        16,
+        17
+      ],
+      "source_bbox": [
+        5,
+        73,
+        2636,
+        117
+      ]
+    },
+    {
+      "file": "progress_pointer.png",
+      "layers": [
+        21
+      ],
+      "source_bbox": [
+        2176,
+        18,
+        2282,
+        169
+      ]
+    },
+    {
+      "file": "health_fill.png",
+      "layers": [
+        22
+      ],
+      "source_bbox": [
+        284,
+        148,
+        1012,
+        227
+      ]
+    },
+    {
+      "file": "progress_fill.png",
+      "layers": [
+        23
+      ],
+      "source_bbox": [
+        288,
+        246,
+        806,
+        261
+      ]
+    },
+    {
+      "file": "pause_button.png",
+      "layers": [
+        24,
+        25
+      ],
+      "source_bbox": [
+        2398,
+        10,
+        2566,
+        179
+      ]
+    },
+    {
+      "file": "combo_label.png",
+      "layers": [
+        27,
+        29
+      ],
+      "source_bbox": [
+        2149,
+        365,
+        2538,
+        458
+      ]
+    },
+    {
+      "file": "hit_ring.png",
+      "layers": [
+        12,
+        13
+      ],
+      "source_bbox": [
+        552,
+        771,
+        738,
+        957
+      ]
+    },
+    {
+      "file": "avatar.png",
+      "source": "PSD merged preview",
+      "source_bbox": [
+        41,
+        38,
+        272,
+        271
+      ]
+    }
+  ]
+}

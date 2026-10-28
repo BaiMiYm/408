@@ -28,7 +28,7 @@ func _run() -> void:
 	assert(scene.combo == 1 and scene.score == 1000)
 	scene._finish()
 	assert(scene.mode == "result")
-	assert(scene.counts["MISS"] == scene.notes.size() - 1)
+	assert(scene.result_failed and scene.health == 0 and scene.counts["MISS"] == 10)
 	scene._pointer(Vector2(640, 550))
 	assert(scene.mode == "intro" and not scene.music.playing)
 	scene._advance_intro(3.0)
